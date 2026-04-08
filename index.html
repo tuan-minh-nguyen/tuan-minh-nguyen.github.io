@@ -56,6 +56,7 @@
             justify-content: center;
             gap: 2rem;
             padding: 1rem 0;
+            flex-wrap: wrap;
         }
         
         .nav-links a {
@@ -79,16 +80,12 @@
             text-align: center;
         }
         
-        .about {
+        .about, .research, .contact {
             background: white;
         }
         
         .research {
             background: #f1f5f9;
-        }
-        
-        .contact {
-            background: white;
         }
         
         .content {
@@ -144,9 +141,9 @@
     <nav>
         <div class="container">
             <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#research">Research</a>
-                <a href="#publications">Publications</a>
+                <a href="index.html">About</a>
+                <a href="#research">Research Interests</a>
+                <a href="publications.html">Publications</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
@@ -183,18 +180,14 @@
         </div>
     </section>
 
-    <!-- Publications & Peer Review -->
-    <section id="publications">
+    <!-- Publications Teaser -->
+    <section style="background: white;">
         <div class="container">
-            <h2>Publications &amp; Peer Review</h2>
+            <h2>Publications</h2>
             <div class="content" style="text-align: center;">
-                <p><strong>Publications</strong> — Please visit the <a href="https://sites.google.com/site/minhbsu/publications" target="_blank">Publications page</a> on my old site for the full list.</p>
+                <p>I have published papers in journals such as <em>Annals of Applied Probability</em>, <em>Stochastic Processes and their Applications</em>, <em>Annales de l'Institut Henri Poincaré</em>, and others.</p>
                 
-                <p style="margin-top: 2rem;"><strong>Peer Review Experience</strong></p>
-                <p>I have reviewed for journals including:</p>
-                <p><em>Stochastic Processes and Applications, Bernoulli, Advances in Applied Probability, Electronic Journal of Probability, Journal of Theoretical Probability</em>, and others.</p>
-                
-                <a href="https://sites.google.com/site/minhbsu/publications" target="_blank" class="btn">View Publications</a>
+                <a href="publications.html" class="btn">View All Publications</a>
             </div>
         </div>
     </section>
@@ -234,12 +227,12 @@
     </footer>
 
     <script>
-        // Smooth scrolling
+        // Smooth scrolling for same-page links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
+                    e.preventDefault();
                     target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
