@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuan-Minh Nguyen | Probability Theory</title>
+    <style>
+        :root {
+            --primary: #1e40af;
+            --dark: #0f172a;
+            --light: #f8fafc;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.7;
+            color: #334155;
+            background: #f8fafc;
+        }
+        
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 0;
+        }
+        
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            color: var(--dark);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .about {
+            background: white;
+        }
+        
+        .research {
+            background: #f1f5f9;
+        }
+        
+        .contact {
+            background: white;
+        }
+        
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+        }
+        
+        ul {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        li {
+            margin-bottom: 0.6rem;
+        }
+        
+        .footer {
+            background: var(--dark);
+            color: #cbd5e1;
+            text-align: center;
+            padding: 3rem 0;
+            font-size: 0.95rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 12px 28px;
+            background: var(--primary);
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .btn:hover {
+            background: #1e3a8a;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Tuan-Minh Nguyen</h1>
+            <p class="subtitle">Research Fellow in Probability Theory</p>
+            <p style="margin-top: 1rem; opacity: 0.85;">School of Mathematics, Monash University, Australia</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#publications">Publications</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="content">
+                <p>My name is <strong>Tuan-Minh Nguyen</strong> (Vietnamese: Nguyễn Tuấn Minh). I am currently a Research Fellow in Probability Theory at the School of Mathematics, Monash University, Australia.</p>
+                
+                <p>I was born in Hue, Vietnam. I completed my PhD under the supervision of Professor Stanislav Volkov at Lund University, Sweden. Prior to that, I earned my undergraduate degree at Belarusian State University.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Interests -->
+    <section id="research" class="research">
+        <div class="container">
+            <h2>Research Interests</h2>
+            <div class="content">
+                <p>Probability theory is my primary area of research. I focus on random processes on graphs, particularly <strong>self-interacting random processes</strong> — stochastic models whose future behavior depends on both their current state and their history.</p>
+                
+                <p>Key examples include:</p>
+                <ul>
+                    <li>Random walks with reinforcement (prefer returning to visited sites)</li>
+                    <li>Random walks with repulsion (prefer exploring new sites)</li>
+                    <li>Excited random walks (behavior changes with number of visits)</li>
+                </ul>
+                
+                <p>I am also interested in random graphs, percolation theory, branching processes, random games, random matrices, queueing theory, point processes, SPDEs, and Malliavin calculus.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications & Peer Review -->
+    <section id="publications">
+        <div class="container">
+            <h2>Publications &amp; Peer Review</h2>
+            <div class="content" style="text-align: center;">
+                <p><strong>Publications</strong> — Please visit the <a href="https://sites.google.com/site/minhbsu/publications" target="_blank">Publications page</a> on my old site for the full list.</p>
+                
+                <p style="margin-top: 2rem;"><strong>Peer Review Experience</strong></p>
+                <p>I have reviewed for journals including:</p>
+                <p><em>Stochastic Processes and Applications, Bernoulli, Advances in Applied Probability, Electronic Journal of Probability, Journal of Theoretical Probability</em>, and others.</p>
+                
+                <a href="https://sites.google.com/site/minhbsu/publications" target="_blank" class="btn">View Publications</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="content" style="text-align: center;">
+                <p><strong>Office:</strong><br>
+                Room 447, Level 4<br>
+                School of Mathematics, Monash University<br>
+                Clayton Campus, 9 Rainforest Walk<br>
+                Victoria 3800, Australia</p>
+                
+                <p style="margin-top: 2rem;">
+                    <strong>Email:</strong><br>
+                    tuanminh.nguyen@monash.edu<br>
+                    minhnguyen@yandex.com
+                </p>
+                
+                <p style="margin-top: 2rem;">
+                    Personal blog: <a href="http://tuanminh1988.wordpress.com/" target="_blank">tuanminh1988.wordpress.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Tuan-Minh Nguyen. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; opacity: 0.7;">
+                Personal academic website • Hosted on GitHub Pages
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
