@@ -499,11 +499,26 @@
     if (!response.ok) throw new Error('Metadata unavailable');
     return response.json();
   }
-  // arXiv metadata may use either TeX delimiter convention.
+  // Decode HTML entities from bibliographic metadata before handing TeX to MathJax.
   function normalizeTeX(value) {
-    return value.replace(/\r\n?/g, '\n')
-      .replace(/\\\(([\s\S]*?)\\\)/g, (_, math) => '\\(' + math.trim() + '\\)')
-      .replace(/\\\[([\s\S]*?)\\\]/g, (_, math) => '\\[' + math.trim() + '\\]');
+    const entities = /&(?:amp|lt|gt|quot|apos|nbsp|#\d+|#x[0-9a-f]+);/gi;
+    const decoder = document.createElement('textarea');
+    let text = value.replace(/\r\n?/g, '\n');
+    for (let pass = 0; pass < 3; pass++) {
+      const decoded = text.replace(entities, entity => {
+        decoder.innerHTML = entity;
+        return decoder.value;
+      });
+      if (decoded === text) break;
+      text = decoded;
+    }
+    // Alignment environments legitimately use unescaped ampersands.
+    // Elsewhere an unescaped ampersand denotes a literal ampersand.
+    const math = /\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|\$\$[\s\S]*?\$\$|(?<!\\)\$(?!\$)(?:\\.|[^$\\])*?(?<!\\)\$/g;
+    return text.replace(math, segment => {
+      if (/\\begin\s*\{(?:align\*?|aligned|alignedat|alignat\*?|array|matrix|[pbBvV]matrix|smallmatrix|cases|dcases|rcases|split|eqnarray\*?)\}/.test(segment)) return segment;
+      return segment.replace(/(?<!\\)&/g, '\\&');
+    });
   }
   let mathQueue = Promise.resolve();
   function renderMath(node) {
