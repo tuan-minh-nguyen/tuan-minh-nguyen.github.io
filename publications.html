@@ -7,7 +7,14 @@
     <script>
         window.MathJax = {
             tex: {
-                inlineMath: [['\\(', '\\)'], ['
+                inlineMath: [['\\(', '\\)'], ['\u0024', '\u0024']],
+                displayMath: [['\\[', '\\]'], ['\u0024\u0024', '\u0024\u0024']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+    <style>
         :root {
             --primary: #1e40af;
             --dark: #0f172a;
