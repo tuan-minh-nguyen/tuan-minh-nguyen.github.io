@@ -9,7 +9,8 @@
             tex: {
                 inlineMath: [['\\(', '\\)'], ['\u0024', '\u0024']],
                 displayMath: [['\\[', '\\]'], ['\u0024\u0024', '\u0024\u0024']],
-                processEscapes: true
+                processEscapes: true,
+                packages: {'[+]': ['ams']}
             }
         };
     </script>
@@ -184,6 +185,8 @@
         .links a { margin-right: 0; }
         details { margin-top: .4rem; font-size: .98rem; }
         summary { cursor: pointer; color: var(--primary); width: fit-content; }
+        mjx-container[display="true"] { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+        .abstract-text { overflow-wrap: break-word; }
         .abstract-source { font-size: .85rem; color: #475569; }
         details p { margin: .45rem 0 .2rem; padding-left: .8rem; border-left: 2px solid #cbd5e1; }
         a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
@@ -220,7 +223,7 @@
             <h2>Publications and Preprints</h2>
             <div class="content">
 
-<p class="intro">Papers and preprints, listed in reverse order of the existing publication numbering. Select a paper title or a link to read the article; expand Abstract to read the original abstract where available. The source link provides the original text if the metadata service is unavailable.</p>
+<p class="intro">Papers and preprints in reverse publication-number order. Select a title to read the paper, or expand its abstract.</p>
 <div class="pub-controls" id="pub-controls" hidden>
   <div><label for="paper-search">Search papers</label><input type="search" id="paper-search" placeholder="Title, author, topic, year"></div>
   <div><label for="paper-status">Publication status</label><select id="paper-status"><option value="all">All papers</option><option value="published">Published</option><option value="forthcoming">Forthcoming</option><option value="preprint">Preprints</option><option value="earlier">Earlier drafts / manuscripts</option></select></div>
@@ -235,7 +238,7 @@
     
     <p class="topics">Excited random walks; trees</p>
     <p class="links"><a href="https://arxiv.org/abs/2610.40084">arXiv:2610.40084</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2610.40084">PDF</a></p>
-    <details class="paper-abstract" data-arxiv="2610.40084"><summary>Abstract</summary><p class="abstract-text">Recurrence and transience of multi-excited walks on locally finite trees, with a critical threshold described by the branching-ruin number.</p><p class="abstract-source"><span class="abstract-note">Research summary; original text at the source.</span> <a href="https://arxiv.org/abs/2610.40084">Read full original abstract</a></p></details>
+    <details class="paper-abstract" data-arxiv="2610.40084"><summary>Abstract</summary><p class="abstract-text">Recurrence and transience of multi-excited walks on locally finite trees, with a critical threshold described by the branching-ruin number.</p><p class="abstract-source"><span class="abstract-note">Summary (original abstract not loaded).</span></p></details>
 </article>
 
 <article class="paper" id="paper-19" data-status="preprint">
@@ -245,7 +248,7 @@
     
     <p class="topics">Excited random walks; limit shapes</p>
     <p class="links"><a href="https://arxiv.org/abs/2610.10162">arXiv:2610.10162</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2610.10162">PDF</a></p>
-    <details class="paper-abstract" data-arxiv="2610.10162"><summary>Abstract</summary><p class="abstract-text">We study walks whose first departure from each nonzero site has a drift toward the origin and establish limit-shape results.</p><p class="abstract-source"><span class="abstract-note">Research summary; original text at the source.</span> <a href="https://arxiv.org/abs/2610.10162">Read full original abstract</a></p></details>
+    <details class="paper-abstract" data-arxiv="2610.10162"><summary>Abstract</summary><p class="abstract-text">We study walks whose first departure from each nonzero site has a drift toward the origin and establish limit-shape results.</p><p class="abstract-source"><span class="abstract-note">Summary (original abstract not loaded).</span></p></details>
 </article>
 
 <article class="paper" id="paper-18" data-status="earlier">
@@ -255,7 +258,7 @@
     
     <p class="topics">Excited random walks; limit shapes</p>
     <p class="links"><a href="https://arxiv.org/abs/2610.07724">arXiv:2610.07724</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2610.07724">PDF</a></p>
-    <details class="paper-abstract" data-arxiv="2610.07724"><summary>Abstract</summary><p class="abstract-text">An earlier independent draft of the work on centrally excited walks. For the subsequent joint work, see <a href="#paper-19">[19]</a>.</p><p class="abstract-source"><span class="abstract-note">Research summary; original text at the source.</span> <a href="https://arxiv.org/abs/2610.07724">Read full original abstract</a></p></details>
+    <details class="paper-abstract" data-arxiv="2610.07724"><summary>Abstract</summary><p class="abstract-text">An earlier independent draft of the work on centrally excited walks. For the subsequent joint work, see <a href="#paper-19">[19]</a>.</p><p class="abstract-source"><span class="abstract-note">Summary (original abstract not loaded).</span></p></details>
 </article>
 
 <article class="paper" id="paper-17" data-status="preprint">
@@ -265,7 +268,7 @@
     
     <p class="topics">Random walks with drift; recurrence and transience</p>
     <p class="links"><a href="https://arxiv.org/abs/2609.11046">arXiv:2609.11046</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2609.11046">PDF</a></p>
-    <details class="paper-abstract" data-arxiv="2609.11046"><summary>Abstract</summary><p class="abstract-text">We study recurrence and transience for walks whose conditional drift depends polynomially on their position and time.</p><p class="abstract-source"><span class="abstract-note">Research summary; original text at the source.</span> <a href="https://arxiv.org/abs/2609.11046">Read full original abstract</a></p></details>
+    <details class="paper-abstract" data-arxiv="2609.11046"><summary>Abstract</summary><p class="abstract-text">We study recurrence and transience for walks whose conditional drift depends polynomially on their position and time.</p><p class="abstract-source"><span class="abstract-note">Summary (original abstract not loaded).</span></p></details>
 </article>
 
 <article class="paper" id="paper-16" data-status="preprint">
@@ -275,7 +278,7 @@
     
     <p class="topics">Random walks in random environments; superdiffusivity</p>
     <p class="links"><a href="https://arxiv.org/abs/2608.21701">arXiv:2608.21701</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2608.21701">PDF</a></p>
-    <details class="paper-abstract" data-arxiv="2608.21701"><summary>Abstract</summary><p class="abstract-text">We establish that in dimension three the diffusion coefficient grows, in the Tauberian sense, as the square root of the logarithm of time, up to iterated-logarithmic corrections.</p><p class="abstract-source"><span class="abstract-note">Research summary; original text at the source.</span> <a href="https://arxiv.org/abs/2608.21701">Read full original abstract</a></p></details>
+    <details class="paper-abstract" data-arxiv="2608.21701"><summary>Abstract</summary><p class="abstract-text">We establish that in dimension three the diffusion coefficient grows, in the Tauberian sense, as the square root of the logarithm of time, up to iterated-logarithmic corrections.</p><p class="abstract-source"><span class="abstract-note">Summary (original abstract not loaded).</span></p></details>
 </article>
 
 <article class="paper" id="paper-15" data-status="preprint">
@@ -285,7 +288,7 @@
     
     <p class="topics">Random walks with drift; limit theorems</p>
     <p class="links"><a href="https://arxiv.org/abs/2605.17725">arXiv:2605.17725</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2605.17725">PDF</a></p>
-    <details class="paper-abstract" data-arxiv="2605.17725"><summary>Abstract</summary><p class="abstract-text">We consider discrete-time walks in \(\mathbb R^d\) with a conditional drift that decreases polynomially with time and increases polynomially with distance from the origin. These models are connected to self-interacting random processes. Assuming that the increments admit a moment of some order \(p&gt;2\), we investigate the limiting behaviour. When the drift is linear in the position, a phase transition occurs among Gaussian distributional limits of the normalized walk. For nonlinear drift, a critical line separates three regimes: a Gaussian limit, a non-Gaussian limit described by the stationary law of a stochastic differential equation, and almost sure localization of the normalized walk on a hypersphere.</p><p class="abstract-source"><span class="abstract-note">Adapted description; original text at the source.</span> <a href="https://arxiv.org/abs/2605.17725">Read full original abstract</a></p></details>
+    <details class="paper-abstract" data-arxiv="2605.17725"><summary>Abstract</summary><p class="abstract-text">We consider discrete-time walks in \(\mathbb R^d\) with a conditional drift that decreases polynomially with time and increases polynomially with distance from the origin. These models are connected to self-interacting random processes. Assuming that the increments admit a moment of some order \(p&gt;2\), we investigate the limiting behaviour. When the drift is linear in the position, a phase transition occurs among Gaussian distributional limits of the normalized walk. For nonlinear drift, a critical line separates three regimes: a Gaussian limit, a non-Gaussian limit described by the stationary law of a stochastic differential equation, and almost sure localization of the normalized walk on a hypersphere.</p><p class="abstract-source"><span class="abstract-note">Summary (original abstract not loaded).</span></p></details>
 </article>
 
 <article class="paper" id="paper-14" data-status="preprint">
@@ -295,7 +298,7 @@
     
     <p class="topics">Self-avoiding walks; trees</p>
     <p class="links"><a href="https://arxiv.org/abs/2604.24389">arXiv:2604.24389</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2604.24389">PDF</a></p>
-    <details class="paper-abstract" data-arxiv="2604.24389"><summary>Abstract</summary><p class="abstract-text">We investigate true self-avoiding walks on infinite locally finite trees. Starting at the root, the walk chooses an incident edge at each step with probability proportional to its weight; an edge traversed \(n\) times has weight \(w(n)=\exp(-\beta n)\). We establish a sharp recurrence–transience transition in terms of the branching-ruin number of the tree, which is also the Hausdorff dimension of its boundary for a suitable metric. Transience holds almost surely when this number exceeds \(1/2\), and recurrence holds when it is smaller than \(1/2\). The result answers a question of Kosygina.</p><p class="abstract-source"><span class="abstract-note">Adapted description; original text at the source.</span> <a href="https://arxiv.org/abs/2604.24389">Read full original abstract</a></p></details>
+    <details class="paper-abstract" data-arxiv="2604.24389"><summary>Abstract</summary><p class="abstract-text">We investigate true self-avoiding walks on infinite locally finite trees. Starting at the root, the walk chooses an incident edge at each step with probability proportional to its weight; an edge traversed \(n\) times has weight \(w(n)=\exp(-\beta n)\). We establish a sharp recurrence–transience transition in terms of the branching-ruin number of the tree, which is also the Hausdorff dimension of its boundary for a suitable metric. Transience holds almost surely when this number exceeds \(1/2\), and recurrence holds when it is smaller than \(1/2\). The result answers a question of Kosygina.</p><p class="abstract-source"><span class="abstract-note">Summary (original abstract not loaded).</span></p></details>
 </article>
 
 <article class="paper" id="paper-13" data-status="preprint">
@@ -305,7 +308,7 @@
     
     <p class="topics">Excited random walks; trees</p>
     <p class="links"><a href="https://arxiv.org/abs/2602.16934">arXiv:2602.16934</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2602.16934">PDF</a></p>
-    <details class="paper-abstract" data-arxiv="2602.16934"><summary>Abstract</summary><p class="abstract-text">We consider walks on trees with one cookie initially placed at every vertex. At its first visit to a vertex, the walker consumes the cookie and makes a biased step; later departures from that vertex are symmetric. The bias parameters constitute an independent random environment. For general trees with polynomial growth, we prove a sharp recurrence–transience transition whose threshold depends on the branching-ruin number.</p><p class="abstract-source"><span class="abstract-note">Adapted description; original text at the source.</span> <a href="https://arxiv.org/abs/2602.16934">Read full original abstract</a></p></details>
+    <details class="paper-abstract" data-arxiv="2602.16934"><summary>Abstract</summary><p class="abstract-text">We consider walks on trees with one cookie initially placed at every vertex. At its first visit to a vertex, the walker consumes the cookie and makes a biased step; later departures from that vertex are symmetric. The bias parameters constitute an independent random environment. For general trees with polynomial growth, we prove a sharp recurrence–transience transition whose threshold depends on the branching-ruin number.</p><p class="abstract-source"><span class="abstract-note">Summary (original abstract not loaded).</span></p></details>
 </article>
 
 <article class="paper" id="paper-12" data-status="preprint">
@@ -315,7 +318,7 @@
     
     <p class="topics">Reinforced processes; localization</p>
     <p class="links"><a href="https://arxiv.org/abs/2401.04366">arXiv:2401.04366</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2401.04366">PDF</a></p>
-    <details class="paper-abstract" data-arxiv="2401.04366"><summary>Abstract</summary><p class="abstract-text">We study nonlinear vertex-reinforced jump processes on arbitrary infinite graphs of bounded degree. Suppose that the reinforcement function \(w\) is nondecreasing and that its reciprocal is integrable. We prove that almost surely only finitely many vertices are visited. When \(w\) is comparable to a superlinear polynomial, the process ultimately remains on a star-shaped subgraph and exactly one vertex has unbounded local time.</p><p class="abstract-source"><span class="abstract-note">Adapted description; original text at the source.</span> <a href="https://arxiv.org/abs/2401.04366">Read full original abstract</a></p></details>
+    <details class="paper-abstract" data-arxiv="2401.04366"><summary>Abstract</summary><p class="abstract-text">We study nonlinear vertex-reinforced jump processes on arbitrary infinite graphs of bounded degree. Suppose that the reinforcement function \(w\) is nondecreasing and that its reciprocal is integrable. We prove that almost surely only finitely many vertices are visited. When \(w\) is comparable to a superlinear polynomial, the process ultimately remains on a star-shaped subgraph and exactly one vertex has unbounded local time.</p><p class="abstract-source"><span class="abstract-note">Summary (original abstract not loaded).</span></p></details>
 </article>
 
 <article class="paper" id="paper-11" data-status="forthcoming">
@@ -325,7 +328,7 @@
     <p class="paper-journal">Mathematics of Operations Research (to appear)</p>
     <p class="topics">Random games; random walks on hypercubes</p>
     <p class="links"><a href="https://arxiv.org/abs/2406.09732">arXiv:2406.09732</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2406.09732">PDF</a></p>
-    <details class="paper-abstract" data-arxiv="2406.09732"><summary>Abstract</summary><p class="abstract-text">Best response dynamics updates a strategy profile by randomly selecting players who can improve their payoff by changing strategy. A pure Nash equilibrium is an absorbing profile, but an equilibrium need not exist and the dynamics may enter a subgame without one. We investigate random games with \(N\) players, two actions per player, and independent identically distributed payoffs, allowing distributions with atoms and hence ties. The game defines a random environment on the \(N\)-dimensional hypercube, in which pure Nash equilibria and traps are distinguished sets. We prove that a class of walks, including best response dynamics and simple random walk, reaches an equilibrium before entering any trap with high probability.</p><p class="abstract-source"><span class="abstract-note">Adapted description; original text at the source.</span> <a href="https://arxiv.org/abs/2406.09732">Read full original abstract</a></p></details>
+    <details class="paper-abstract" data-arxiv="2406.09732"><summary>Abstract</summary><p class="abstract-text">Best response dynamics updates a strategy profile by randomly selecting players who can improve their payoff by changing strategy. A pure Nash equilibrium is an absorbing profile, but an equilibrium need not exist and the dynamics may enter a subgame without one. We investigate random games with \(N\) players, two actions per player, and independent identically distributed payoffs, allowing distributions with atoms and hence ties. The game defines a random environment on the \(N\)-dimensional hypercube, in which pure Nash equilibria and traps are distinguished sets. We prove that a class of walks, including best response dynamics and simple random walk, reaches an equilibrium before entering any trap with high probability.</p><p class="abstract-source"><span class="abstract-note">Summary (original abstract not loaded).</span></p></details>
 </article>
 
 <article class="paper" id="paper-10" data-status="published">
@@ -335,7 +338,7 @@
     <p class="paper-journal">Annals of Applied Probability, 32(4), 2671–2705 (2022)</p>
     <p class="topics">Reinforced processes; recurrence and localization</p>
     <p class="links"><a href="https://arxiv.org/abs/2004.05927">arXiv:2004.05927</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2004.05927">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1214/21-AAP1743">Journal / DOI</a></p>
-    <details class="paper-abstract" data-arxiv="2004.05927"><summary>Abstract</summary><p class="abstract-text">We consider a nonlinear vertex-reinforced jump process on \(\mathbb Z\) with initial weights one and an increasing measurable weight function \(w:[1,\infty)\to[1,\infty)\). If \(\int_1^\infty du/w(u)=\infty\), we prove recurrence, with every vertex visited infinitely often and all local times unbounded. If \(\int_1^\infty du/w(u)&lt;\infty\) and, for some \(\rho&gt;0\), the function \(t\mapsto w(t)^\rho\int_t^\infty du/w(u)\) is nonincreasing, we prove eventual localization on precisely three vertices, exactly one of which has unbounded local time. For equal initial weights, transience is impossible: some vertex receives infinitely many visits. This extends the recurrence result of Davis and Volkov (2002) for linear reinforcement.</p><p class="abstract-source"><span class="abstract-note">Adapted description; original text at the source.</span> <a href="https://arxiv.org/abs/2004.05927">Read full original abstract</a></p></details>
+    <details class="paper-abstract" data-arxiv="2004.05927"><summary>Abstract</summary><p class="abstract-text">We consider a nonlinear vertex-reinforced jump process on \(\mathbb Z\) with initial weights one and an increasing measurable weight function \(w:[1,\infty)\to[1,\infty)\). If \(\int_1^\infty du/w(u)=\infty\), we prove recurrence, with every vertex visited infinitely often and all local times unbounded. If \(\int_1^\infty du/w(u)&lt;\infty\) and, for some \(\rho&gt;0\), the function \(t\mapsto w(t)^\rho\int_t^\infty du/w(u)\) is nonincreasing, we prove eventual localization on precisely three vertices, exactly one of which has unbounded local time. For equal initial weights, transience is impossible: some vertex receives infinitely many visits. This extends the recurrence result of Davis and Volkov (2002) for linear reinforcement.</p><p class="abstract-source"><span class="abstract-note">Summary (original abstract not loaded).</span></p></details>
 </article>
 
 <article class="paper" id="paper-9" data-status="published">
@@ -345,7 +348,7 @@
     <p class="paper-journal">Journal of Statistical Physics, 188(1), Article 3 (2022)</p>
     <p class="topics">Excited random walks; speed; branching processes</p>
     <p class="links"><a href="https://arxiv.org/abs/2103.10610">arXiv:2103.10610</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2103.10610">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1007/s10955-022-02926-2">Journal / DOI</a></p>
-    <details class="paper-abstract" data-arxiv="2103.10610"><summary>Abstract</summary><p class="abstract-text">We study multi-excited walks on \(\mathbb Z\) whose jumps from \(x\) are either to \(x+1\) or to \(x-i\), where \(1\le i\le L\) and \(L\ge1\). We identify an associated multitype branching structure and prove a limit theorem for a multitype Galton–Watson process with emigration. Combining this theorem with the method of Basdevant and Singh (2008), we extend their nearest-neighbour speed criterion: in the regime of right transience, the speed is strictly positive exactly when the expected total drift \(\delta\) exceeds two. This establishes a special case of a conjecture of Davis and Peterson.</p><p class="abstract-source"><span class="abstract-note">Adapted description; original text at the source.</span> <a href="https://arxiv.org/abs/2103.10610">Read full original abstract</a></p></details>
+    <details class="paper-abstract" data-arxiv="2103.10610"><summary>Abstract</summary><p class="abstract-text">We study multi-excited walks on \(\mathbb Z\) whose jumps from \(x\) are either to \(x+1\) or to \(x-i\), where \(1\le i\le L\) and \(L\ge1\). We identify an associated multitype branching structure and prove a limit theorem for a multitype Galton–Watson process with emigration. Combining this theorem with the method of Basdevant and Singh (2008), we extend their nearest-neighbour speed criterion: in the regime of right transience, the speed is strictly positive exactly when the expected total drift \(\delta\) exceeds two. This establishes a special case of a conjecture of Davis and Peterson.</p><p class="abstract-source"><span class="abstract-note">Summary (original abstract not loaded).</span></p></details>
 </article>
 
 <article class="paper" id="paper-8" data-status="published">
@@ -355,7 +358,7 @@
     <p class="paper-journal">Stochastic Processes and their Applications, 142, 462–478 (2021)</p>
     <p class="topics">Excited random walks; speed</p>
     <p class="links"><a href="https://arxiv.org/abs/2011.00493">arXiv:2011.00493</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2011.00493">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1016/j.spa.2021.08.003">Journal / DOI</a></p>
-    <details class="paper-abstract" data-arxiv="2011.00493"><summary>Abstract</summary><p class="abstract-text">We consider one-dimensional excited walks whose first departure from a vertex may include long jumps and has positive mean displacement to the right. Departures from previously visited vertices have the increment law of a simple symmetric random walk. We prove a sufficient condition for strictly positive speed.</p><p class="abstract-source"><span class="abstract-note">Adapted description; original text at the source.</span> <a href="https://arxiv.org/abs/2011.00493">Read full original abstract</a></p></details>
+    <details class="paper-abstract" data-arxiv="2011.00493"><summary>Abstract</summary><p class="abstract-text">We consider one-dimensional excited walks whose first departure from a vertex may include long jumps and has positive mean displacement to the right. Departures from previously visited vertices have the increment law of a simple symmetric random walk. We prove a sufficient condition for strictly positive speed.</p><p class="abstract-source"><span class="abstract-note">Summary (original abstract not loaded).</span></p></details>
 </article>
 
 <article class="paper" id="paper-7" data-status="published">
@@ -365,7 +368,7 @@
     <p class="paper-journal">Annales de l'Institut Henri Poincaré, Probabilités et Statistiques, 57(3), 1549–1568 (2021)</p>
     <p class="topics">Reinforced processes; localization</p>
     <p class="links"><a href="https://arxiv.org/abs/1810.06905">arXiv:1810.06905</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/1810.06905">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1214/20-AIHP1115">Journal / DOI</a></p>
-    <details class="paper-abstract" data-arxiv="1810.06905"><summary>Abstract</summary><p class="abstract-text">For vertex-reinforced jump processes with reinforcement \(w(t)=t^\alpha\), \(\alpha&gt;1\), we study the distribution of occupation times on a complete graph. We prove that almost surely one vertex has infinite total occupation time, while the combined occupation time of all other vertices is finite.</p><p class="abstract-source"><span class="abstract-note">Adapted description; original text at the source.</span> <a href="https://arxiv.org/abs/1810.06905">Read full original abstract</a></p></details>
+    <details class="paper-abstract" data-arxiv="1810.06905"><summary>Abstract</summary><p class="abstract-text">For vertex-reinforced jump processes with reinforcement \(w(t)=t^\alpha\), \(\alpha&gt;1\), we study the distribution of occupation times on a complete graph. We prove that almost surely one vertex has infinite total occupation time, while the combined occupation time of all other vertices is finite.</p><p class="abstract-source"><span class="abstract-note">Summary (original abstract not loaded).</span></p></details>
 </article>
 
 <article class="paper" id="paper-6" data-status="published">
@@ -375,7 +378,7 @@
     <p class="paper-journal">Journal of Applied Probability, 57(2), 409–428 (2020)</p>
     <p class="topics">Markov chains; limit distributions</p>
     <p class="links"><a href="https://arxiv.org/abs/1709.00174">arXiv:1709.00174</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/1709.00174">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1017/jpr.2020.19">Journal / DOI</a></p>
-    <details class="paper-abstract" data-arxiv="1709.00174"><summary>Abstract</summary><p class="abstract-text">We consider Markov chains in the standard simplex of dimension \(d\ge1\). From an interior point, the chain selects one of the \(d+1\) vertices with probabilities depending on its current position, and jumps to a random point on the segment towards the selected vertex. Using properties of beta distributions, we identify Dirichlet limiting laws in several cases. We also investigate an urn-based history-dependent walk on \([0,1]\) and prove convergence in distribution to the arcsine law.</p><p class="abstract-source"><span class="abstract-note">Adapted description; original text at the source.</span> <a href="https://arxiv.org/abs/1709.00174">Read full original abstract</a></p></details>
+    <details class="paper-abstract" data-arxiv="1709.00174"><summary>Abstract</summary><p class="abstract-text">We consider Markov chains in the standard simplex of dimension \(d\ge1\). From an interior point, the chain selects one of the \(d+1\) vertices with probabilities depending on its current position, and jumps to a random point on the segment towards the selected vertex. Using properties of beta distributions, we identify Dirichlet limiting laws in several cases. We also investigate an urn-based history-dependent walk on \([0,1]\) and prove convergence in distribution to the arcsine law.</p><p class="abstract-source"><span class="abstract-note">Summary (original abstract not loaded).</span></p></details>
 </article>
 
 <article class="paper" id="paper-5" data-status="published">
@@ -385,7 +388,7 @@
     <p class="paper-journal">Random Structures &amp; Algorithms, 51(2), 341–371 (2017)</p>
     <p class="topics">Random geometry; products of random matrices</p>
     <p class="links"><a href="https://arxiv.org/abs/1506.04942">arXiv:1506.04942</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/1506.04942">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1002/rsa.20702">Journal / DOI</a></p>
-    <details class="paper-abstract" data-arxiv="1506.04942"><summary>Abstract</summary><p class="abstract-text">Starting from a convex polygon with \(d\ge3\) edges, we independently choose a point on each edge according to a common distribution of the relative position, denoted by \(\xi\). Connecting these points and repeating the procedure defines a sequence of random polygons. Under mild nondegeneracy assumptions on \(\xi\), we prove that their shapes become asymptotically flat. We study the rate of convergence and, for triangles, express how the exact rate can be calculated through Lyapunov exponents. Using products of random matrices, we extend the results of Volkov (2013).</p><p class="abstract-source"><span class="abstract-note">Adapted description; original text at the source.</span> <a href="https://arxiv.org/abs/1506.04942">Read full original abstract</a></p></details>
+    <details class="paper-abstract" data-arxiv="1506.04942"><summary>Abstract</summary><p class="abstract-text">Starting from a convex polygon with \(d\ge3\) edges, we independently choose a point on each edge according to a common distribution of the relative position, denoted by \(\xi\). Connecting these points and repeating the procedure defines a sequence of random polygons. Under mild nondegeneracy assumptions on \(\xi\), we prove that their shapes become asymptotically flat. We study the rate of convergence and, for triangles, express how the exact rate can be calculated through Lyapunov exponents. Using products of random matrices, we extend the results of Volkov (2013).</p><p class="abstract-source"><span class="abstract-note">Summary (original abstract not loaded).</span></p></details>
 </article>
 
 <article class="paper" id="paper-4" data-status="published">
@@ -395,7 +398,7 @@
     <p class="paper-journal">Trudy Instituta Matematiki, 24(1), 100–106 (2016)</p>
     <p class="topics">Partial differential equations; Fourier analysis</p>
     <p class="links"><a href="https://www.mathnet.ru/php/archive.phtml?jrnid=timb&amp;option_lang=eng&amp;paperid=263&amp;wshow=paper">Journal / repository</a></p>
-    <details class="paper-abstract"><summary>Abstract</summary><p class="abstract-text">We derive a total-energy formula for the Cauchy problem for the Cauchy–Navier equation describing isotropic elastodynamics.</p><p class="abstract-source"><span class="abstract-note">Research summary; original text at the source.</span> <a href="https://www.mathnet.ru/php/archive.phtml?jrnid=timb&amp;option_lang=eng&amp;paperid=263&amp;wshow=paper">Read full original abstract</a></p></details>
+    <details class="paper-abstract"><summary>Abstract</summary><p class="abstract-text">We derive a total-energy formula for the Cauchy problem for the Cauchy–Navier equation describing isotropic elastodynamics.</p><p class="abstract-source"><span class="abstract-note">Summary (original abstract not loaded).</span></p></details>
 </article>
 
 <article class="paper" id="paper-3" data-status="published">
@@ -405,7 +408,7 @@
     <p class="paper-journal">Vestnik Belorusskogo Gosudarstvennogo Universiteta, Ser. 1, 2012(3), 135–141 (2012)</p>
     <p class="topics">Queueing theory</p>
     <p class="links"><a href="https://elib.bsu.by/handle/123456789/49231">Journal / repository</a></p>
-    <details class="paper-abstract"><summary>Abstract</summary><p class="abstract-text">We study a \(\mathrm{GI}/\mathrm{M}/1\) queue with randomized threshold admission control.</p><p class="abstract-source"><span class="abstract-note">Research summary; original text at the source.</span> <a href="https://elib.bsu.by/handle/123456789/49231">Read full original abstract</a></p></details>
+    <details class="paper-abstract"><summary>Abstract</summary><p class="abstract-text">We study a \(\mathrm{GI}/\mathrm{M}/1\) queue with randomized threshold admission control.</p><p class="abstract-source"><span class="abstract-note">Summary (original abstract not loaded).</span></p></details>
 </article>
 
 <article class="paper" id="paper-2" data-status="published">
@@ -415,7 +418,7 @@
     <p class="paper-journal">Mathematical Modelling and Analysis, 17(5), 630–641 (2012)</p>
     <p class="topics">Partial differential equations; Fourier analysis</p>
     <p class="links"><a href="https://arxiv.org/abs/1111.2132">arXiv:1111.2132</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/1111.2132">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.3846/13926292.2012.734864">Journal / DOI</a></p>
-    <details class="paper-abstract" data-arxiv="1111.2132"><summary>Abstract</summary><p class="abstract-text">Using Fourier analysis, we determine an exact solution of the Cauchy problem for the \(n\)-dimensional biwave equation in \(\mathbb R^n\times[0,\infty)\).</p><p class="abstract-source"><span class="abstract-note">Adapted description; original text at the source.</span> <a href="https://arxiv.org/abs/1111.2132">Read full original abstract</a></p></details>
+    <details class="paper-abstract" data-arxiv="1111.2132"><summary>Abstract</summary><p class="abstract-text">Using Fourier analysis, we determine an exact solution of the Cauchy problem for the \(n\)-dimensional biwave equation in \(\mathbb R^n\times[0,\infty)\).</p><p class="abstract-source"><span class="abstract-note">Summary (original abstract not loaded).</span></p></details>
 </article>
 
 <article class="paper" id="paper-1" data-status="earlier">
@@ -425,7 +428,7 @@
     
     <p class="topics">Poisson point processes; Malliavin calculus; Gaussian approximation</p>
     <p class="links"><a href="https://arxiv.org/abs/1111.2140">arXiv:1111.2140</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/1111.2140">PDF</a></p>
-    <details class="paper-abstract" data-arxiv="1111.2140"><summary>Abstract</summary><p class="abstract-text">We apply the Malliavin–Stein inequality on Poisson space to bound a probability distance between a Gaussian vector and a vector formed by U-statistics of Poisson point processes.</p><p class="abstract-source"><span class="abstract-note">Adapted description; original text at the source.</span> <a href="https://arxiv.org/abs/1111.2140">Read full original abstract</a></p></details>
+    <details class="paper-abstract" data-arxiv="1111.2140"><summary>Abstract</summary><p class="abstract-text">We apply the Malliavin–Stein inequality on Poisson space to bound a probability distance between a Gaussian vector and a vector formed by U-statistics of Poisson point processes.</p><p class="abstract-source"><span class="abstract-note">Summary (original abstract not loaded).</span></p></details>
 </article>
 </div>
                 <h3 style="margin: 3rem 0 1.5rem; color: #1e40af;">PhD Thesis</h3>
@@ -496,6 +499,20 @@
     if (!response.ok) throw new Error('Metadata unavailable');
     return response.json();
   }
+  // arXiv metadata may use either TeX delimiter convention.
+  function normalizeTeX(value) {
+    return value.replace(/\r\n?/g, '\n')
+      .replace(/\\\(([\s\S]*?)\\\)/g, (_, math) => '\\(' + math.trim() + '\\)')
+      .replace(/\\\[([\s\S]*?)\\\]/g, (_, math) => '\\[' + math.trim() + '\\]');
+  }
+  let mathQueue = Promise.resolve();
+  function renderMath(node) {
+    mathQueue = mathQueue.catch(() => {}).then(async () => {
+      if (window.MathJax?.startup?.promise) await window.MathJax.startup.promise;
+      if (window.MathJax?.typesetPromise) await window.MathJax.typesetPromise([node]);
+    });
+    return mathQueue;
+  }
   async function load(entry) {
     if (!entry.open || entry.dataset.loaded || entry.dataset.loading) return;
     entry.dataset.loading = 'true';
@@ -518,11 +535,12 @@
       }
       if (!abstract || !abstract.trim()) throw new Error('No abstract in metadata');
       const p = entry.querySelector('.abstract-text');
+      if (window.MathJax?.startup?.promise) await window.MathJax.startup.promise;
       if (window.MathJax?.typesetClear) window.MathJax.typesetClear([p]);
-      p.textContent = abstract.trim();
-      note.textContent = 'Original abstract retrieved from bibliographic metadata.';
+      p.textContent = normalizeTeX(abstract.trim());
+      note.parentElement.hidden = true;
       entry.dataset.loaded = 'true';
-      if (window.MathJax?.typesetPromise) await window.MathJax.typesetPromise([p]);
+      await renderMath(p);
     } catch (error) {
       note.textContent = previous;
     } finally {
@@ -530,7 +548,7 @@
     }
   }
   entries.forEach(entry => {
-    entry.addEventListener('toggle', () => load(entry));
+    entry.addEventListener('toggle', () => { if (entry.open) load(entry); });
     if (entry.open) load(entry);
   });
 })();
