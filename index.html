@@ -131,6 +131,12 @@
         .content h3 { margin-top: 1.5rem; color: var(--dark); }
         section[id] { scroll-margin-top: 6rem; }
         @media (max-width: 600px) { h1 { font-size: 2.2rem; } section { padding: 40px 0; } .nav-links { gap: .75rem 1rem; } }
+        .about-layout { display: flex; gap: 2rem; align-items: flex-start; }
+        .profile-photo { flex: 0 0 220px; margin: 0; }
+        .profile-photo img { width: 100%; height: auto; display: block; border-radius: 4px; }
+        .profile-photo[hidden] { display: none; }
+        .about-text { flex: 1; min-width: 0; }
+        @media (max-width: 600px) { .about-layout { flex-direction: column; align-items: center; } .profile-photo { flex: auto; width: min(220px, 100%); } }
     </style>
 </head>
 <body>
@@ -159,9 +165,12 @@
     <section id="about" class="about">
         <div class="container">
             <h2>About Me</h2>
-            <div class="content">
+            <div class="content about-layout">
+                <figure class="profile-photo"><img src="https://lh3.googleusercontent.com/sitesv/AA5AbUAqMzurPOjJ3Uvefio6aNaQEfKQwOlbFx017KSpe8x_DAWYwfm9TTUzHheetCs6qhWRQh5ZmlVWmikGmb4SYMtKourlQMM92YOJKY0x1_nDZqT49NNan7YIXZpz59S_V4p_XzTKbIXDR6APBI637YmyuzwidlLxkWa1YpkxsFjlAuj_38GBQ1Z0KBxb7WAIgKKB1mqp8Q=w1280" alt="Tuan-Minh Nguyen" width="240" referrerpolicy="no-referrer" onerror="this.closest('figure').hidden=true"></figure>
+                <div class="about-text">
                 <p>My name is <strong>Tuan-Minh Nguyen</strong> (Nguyễn Tuấn Minh in Vietnamese), also known as Minh Nguyen. My surname Nguyen is pronounced approximately /ŋwien/ or /ŋuen/. I am a research fellow in probability theory at the School of Mathematics, Monash University, Australia.</p>
                 <p>I was born in Hue, Vietnam. Before moving to Australia, I completed my doctorate at Lund University in Sweden, supervised by Professor Stanislav Volkov. I received my undergraduate diploma from Belarusian State University.</p>
+                </div>
             </div>
         </div>
     </section>
