@@ -4,6 +4,964 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications - Tuan-Minh Nguyen</title>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['
+        :root {
+            --primary: #1e40af;
+            --dark: #0f172a;
+            --light: #f8fafc;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.7;
+            color: #334155;
+            background: #f8fafc;
+        }
+        
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            color: var(--dark);
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+        
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        .paper {
+            margin-bottom: 1.8rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .paper:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .paper-number {
+            font-weight: bold;
+            color: var(--primary);
+            margin-right: 8px;
+        }
+        
+        .paper-title {
+            font-weight: 600;
+            margin: 8px 0;
+            color: #1e2937;
+        }
+        
+        .paper-authors {
+            color: #475569;
+            font-style: italic;
+        }
+        
+        .paper-journal {
+            color: #334155;
+            margin-top: 6px;
+        }
+        
+        .links a {
+            color: var(--primary);
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        
+        .links a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            background: var(--dark);
+            color: #cbd5e1;
+            text-align: center;
+            padding: 3rem 0;
+            font-size: 0.95rem;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 10px 24px;
+            background: var(--primary);
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .back-btn:hover {
+            background: #1e3a8a;
+        }
+
+        .intro { margin: 0 0 1.25rem; }
+        .pub-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 12px; margin: 1.5rem 0 .5rem; }
+        [hidden] { display: none !important; }
+        .pub-controls > div { flex: 1 1 180px; }
+        .pub-controls label { display:block; font-size: .9rem; font-weight: 600; margin-bottom: 4px; }
+        .pub-controls input, .pub-controls select, .pub-controls button { font: inherit; font-size: .95rem; color: var(--dark); background: white; border: 1px solid #94a3b8; border-radius: 5px; padding: 9px 12px; }
+        .pub-controls input, .pub-controls select { width:100%; }
+        .pub-controls button { cursor:pointer; }
+        .count, .topics, .paper-meta { font-size: .9rem; color:#475569; }
+        .count { margin: 1rem 0; }
+        .paper { scroll-margin-top: 7rem; margin-bottom: 1.3rem; padding-bottom: 1.3rem; }
+        .paper-title { font-size: 1.2rem; line-height: 1.45; margin: .25rem 0; }
+        .paper-title a { color: var(--dark); text-decoration: none; }
+        .paper-title a:hover { text-decoration: underline; color: var(--primary); }
+        .paper-authors { font-style: normal; }
+        .paper-authors a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+        .paper-journal { font-style: italic; }
+        .topics { margin-top: .3rem; }
+        .links { margin-top: .45rem; font-size: .95rem; overflow-wrap: anywhere; }
+        .links a { margin-right: 0; }
+        details { margin-top: .4rem; font-size: .98rem; }
+        summary { cursor: pointer; color: var(--primary); width: fit-content; }
+        details p { margin: .45rem 0 .2rem; padding-left: .8rem; border-left: 2px solid #cbd5e1; }
+        a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+        mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+        @media (max-width: 600px) { h1 { font-size: 2.1rem; } section { padding: 40px 0; } .nav-links { gap: 1rem; } .paper-title { font-size: 1.1rem; } }
+        @media print { nav, .pub-controls, .back-btn, .footer { display: none; } header { background: white; color: black; padding: 0; } .paper { break-inside: avoid; } section { padding: 20px 0; } }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Tuan-Minh Nguyen</h1>
+            <p class="subtitle">Research Fellow in Probability Theory</p>
+            <p style="margin-top: 1rem; opacity: 0.85;">School of Mathematics, Monash University</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-links">
+                <a href="index.html">About</a>
+                <a href="index.html#research">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Publications Section -->
+    <section>
+        <div class="container">
+            <h2>Publications and Preprints</h2>
+            <div class="content">
+
+<p class="intro">Papers and preprints, listed in reverse order of the existing publication numbering. Select a paper title or a link to read the article; expand the research summary for a short description of its results.</p>
+<div class="pub-controls" id="pub-controls" hidden>
+  <div><label for="paper-search">Search papers</label><input type="search" id="paper-search" placeholder="Title, author, topic, year"></div>
+  <div><label for="paper-status">Publication status</label><select id="paper-status"><option value="all">All papers</option><option value="published">Published</option><option value="forthcoming">Forthcoming</option><option value="preprint">Preprints</option><option value="earlier">Earlier drafts / manuscripts</option></select></div>
+  <button type="button" id="toggle-summaries" aria-expanded="false">Expand summaries</button>
+</div>
+<p id="paper-count" class="count" aria-live="polite">20 papers and manuscripts</p>
+<div id="papers">
+<article class="paper" id="paper-20" data-status="preprint">
+    <div class="paper-meta"><span class="paper-number">[20]</span> <span>2026 · Preprint</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/2610.40084">Multi-excited random walks on general trees</a></h3>
+    <p class="paper-authors">Jack Mills, <strong>Tuan-Minh Nguyen</strong></p>
+    
+    <p class="topics">Excited random walks; trees</p>
+    <p class="links"><a href="https://arxiv.org/abs/2610.40084">arXiv:2610.40084</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2610.40084">PDF</a></p>
+    <details><summary>Research summary</summary><p>Recurrence and transience of multi-excited walks on locally finite trees, with a critical threshold described by the branching-ruin number.</p></details>
+</article>
+
+<article class="paper" id="paper-19" data-status="preprint">
+    <div class="paper-meta"><span class="paper-number">[19]</span> <span>2026 · Preprint</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/2610.10162">Limit shapes for centrally excited walks</a></h3>
+    <p class="paper-authors"><a href="https://nitromannitol.github.io/">Ahmed Bou-Rabee</a>, <strong>Tuan-Minh Nguyen</strong>, Yuval Peres, <a href="https://www.cmap.polytechnique.fr/~arvind.singh/research.html">Arvind Singh</a></p>
+    
+    <p class="topics">Excited random walks; limit shapes</p>
+    <p class="links"><a href="https://arxiv.org/abs/2610.10162">arXiv:2610.10162</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2610.10162">PDF</a></p>
+    <details><summary>Research summary</summary><p>We study walks whose first departure from each nonzero site has a drift toward the origin and establish limit-shape results.</p></details>
+</article>
+
+<article class="paper" id="paper-18" data-status="earlier">
+    <div class="paper-meta"><span class="paper-number">[18]</span> <span>2026 · Earlier draft</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/2610.07724">Shape theorem for excited random walks on the integer lattice</a></h3>
+    <p class="paper-authors"><strong>Tuan-Minh Nguyen</strong></p>
+    
+    <p class="topics">Excited random walks; limit shapes</p>
+    <p class="links"><a href="https://arxiv.org/abs/2610.07724">arXiv:2610.07724</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2610.07724">PDF</a></p>
+    <details><summary>Research summary</summary><p>An earlier independent draft of the work on centrally excited walks. For the subsequent joint work, see <a href="#paper-19">[19]</a>.</p></details>
+</article>
+
+<article class="paper" id="paper-17" data-status="preprint">
+    <div class="paper-meta"><span class="paper-number">[17]</span> <span>2026 · Preprint</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/2609.11046">Recurrence and transience of random walks with drift \(\rho x^{\alpha}/t^{\beta}\)</a></h3>
+    <p class="paper-authors">Ngo P. N. Ngoc, <strong>Tuan-Minh Nguyen</strong></p>
+    
+    <p class="topics">Random walks with drift; recurrence and transience</p>
+    <p class="links"><a href="https://arxiv.org/abs/2609.11046">arXiv:2609.11046</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2609.11046">PDF</a></p>
+    <details><summary>Research summary</summary><p>We study recurrence and transience for walks whose conditional drift depends polynomially on their position and time.</p></details>
+</article>
+
+<article class="paper" id="paper-16" data-status="preprint">
+    <div class="paper-meta"><span class="paper-number">[16]</span> <span>2026 · Preprint</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/2608.21701">Superdiffusivity of random walks on the three-dimensional randomly oriented Manhattan lattice</a></h3>
+    <p class="paper-authors"><strong>Tuan-Minh Nguyen</strong></p>
+    
+    <p class="topics">Random walks in random environments; superdiffusivity</p>
+    <p class="links"><a href="https://arxiv.org/abs/2608.21701">arXiv:2608.21701</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2608.21701">PDF</a></p>
+    <details><summary>Research summary</summary><p>We establish that in dimension three the diffusion coefficient grows, in the Tauberian sense, as the square root of the logarithm of time, up to iterated-logarithmic corrections.</p></details>
+</article>
+
+<article class="paper" id="paper-15" data-status="preprint">
+    <div class="paper-meta"><span class="paper-number">[15]</span> <span>2026 · Preprint</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/2605.17725">Limit theorems for random walks with spatio-temporal drift</a></h3>
+    <p class="paper-authors">Ngo P. N. Ngoc, <strong>Tuan-Minh Nguyen</strong></p>
+    
+    <p class="topics">Random walks with drift; limit theorems</p>
+    <p class="links"><a href="https://arxiv.org/abs/2605.17725">arXiv:2605.17725</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2605.17725">PDF</a></p>
+    <details><summary>Research summary</summary><p>We establish phase transitions for walks with time-dependent and position-dependent drift. The limiting behavior includes Gaussian and non-Gaussian limits and almost sure localization on a hypersphere.</p></details>
+</article>
+
+<article class="paper" id="paper-14" data-status="preprint">
+    <div class="paper-meta"><span class="paper-number">[14]</span> <span>2026 · Preprint</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/2604.24389">&quot;True&quot; self-avoiding walks on general trees</a></h3>
+    <p class="paper-authors"><strong>Tuan-Minh Nguyen</strong></p>
+    
+    <p class="topics">Self-avoiding walks; trees</p>
+    <p class="links"><a href="https://arxiv.org/abs/2604.24389">arXiv:2604.24389</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2604.24389">PDF</a></p>
+    <details><summary>Research summary</summary><p>For exponentially decreasing edge weights, we prove transience when the branching-ruin number exceeds \(1/2\) and recurrence when it is below \(1/2\), resolving a question of Kosygina.</p></details>
+</article>
+
+<article class="paper" id="paper-13" data-status="preprint">
+    <div class="paper-meta"><span class="paper-number">[13]</span> <span>2026 · Preprint</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/2602.16934">Once-excited random walks on general trees</a></h3>
+    <p class="paper-authors">Duy-Bao Le, <strong>Tuan-Minh Nguyen</strong></p>
+    
+    <p class="topics">Excited random walks; trees</p>
+    <p class="links"><a href="https://arxiv.org/abs/2602.16934">arXiv:2602.16934</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2602.16934">PDF</a></p>
+    <details><summary>Research summary</summary><p>We establish a recurrence–transience phase transition for once-excited walks on trees with polynomial growth and independent random biases, in terms of the branching-ruin number.</p></details>
+</article>
+
+<article class="paper" id="paper-12" data-status="preprint">
+    <div class="paper-meta"><span class="paper-number">[12]</span> <span>2024 · Preprint</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/2401.04366">Strongly vertex-reinforced jump process on graphs with bounded degree</a></h3>
+    <p class="paper-authors">Andrea Collevecchio, <strong>Tuan-Minh Nguyen</strong></p>
+    
+    <p class="topics">Reinforced processes; localization</p>
+    <p class="links"><a href="https://arxiv.org/abs/2401.04366">arXiv:2401.04366</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2401.04366">PDF</a></p>
+    <details><summary>Research summary</summary><p>We prove finiteness of the visited set for nondecreasing reinforcement with integrable reciprocal. For reinforcement comparable to a superlinear polynomial, the process eventually remains on a star with a unique vertex of unbounded local time.</p></details>
+</article>
+
+<article class="paper" id="paper-11" data-status="forthcoming">
+    <div class="paper-meta"><span class="paper-number">[11]</span> <span>2024 (preprint year) · Forthcoming</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/2406.09732">Finding pure Nash equilibria in large random games</a></h3>
+    <p class="paper-authors">Andrea Collevecchio, <strong>Tuan-Minh Nguyen</strong>, Ziwen Zhong</p>
+    <p class="paper-journal">Mathematics of Operations Research (to appear)</p>
+    <p class="topics">Random games; random walks on hypercubes</p>
+    <p class="links"><a href="https://arxiv.org/abs/2406.09732">arXiv:2406.09732</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2406.09732">PDF</a></p>
+    <details><summary>Research summary</summary><p>We study random games with two actions per player and independent payoffs, allowing ties. Best response dynamics and other nearest-neighbor walks reach a pure Nash equilibrium before hitting a trap with high probability.</p></details>
+</article>
+
+<article class="paper" id="paper-10" data-status="published">
+    <div class="paper-meta"><span class="paper-number">[10]</span> <span>2022 · Published</span></div>
+    <h3 class="paper-title"><a href="https://doi.org/10.1214/21-AAP1743">Vertex-reinforced jump process on the integers with nonlinear reinforcement</a></h3>
+    <p class="paper-authors">Andrea Collevecchio, <strong>Tuan-Minh Nguyen</strong>, Stanislav Volkov</p>
+    <p class="paper-journal">Annals of Applied Probability, 32(4), 2671–2705 (2022)</p>
+    <p class="topics">Reinforced processes; recurrence and localization</p>
+    <p class="links"><a href="https://arxiv.org/abs/2004.05927">arXiv:2004.05927</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2004.05927">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1214/21-AAP1743">Journal / DOI</a></p>
+    <details><summary>Research summary</summary><p>We establish recurrence for reinforcement with nonintegrable reciprocal, and localization on three vertices under an additional regularity condition in the integrable case. Only one vertex then has unbounded local time.</p></details>
+</article>
+
+<article class="paper" id="paper-9" data-status="published">
+    <div class="paper-meta"><span class="paper-number">[9]</span> <span>2022 · Published</span></div>
+    <h3 class="paper-title"><a href="https://doi.org/10.1007/s10955-022-02926-2">Speed of excited random walks with long backward steps</a></h3>
+    <p class="paper-authors"><strong>Tuan-Minh Nguyen</strong></p>
+    <p class="paper-journal">Journal of Statistical Physics, 188(1), Article 3 (2022)</p>
+    <p class="topics">Excited random walks; speed; branching processes</p>
+    <p class="links"><a href="https://arxiv.org/abs/2103.10610">arXiv:2103.10610</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2103.10610">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1007/s10955-022-02926-2">Journal / DOI</a></p>
+    <details><summary>Research summary</summary><p>For a multi-excited walk with bounded backward jumps, we prove that in the right-transient regime the speed is positive exactly when the expected total drift per site exceeds two.</p></details>
+</article>
+
+<article class="paper" id="paper-8" data-status="published">
+    <div class="paper-meta"><span class="paper-number">[8]</span> <span>2021 · Published</span></div>
+    <h3 class="paper-title"><a href="https://doi.org/10.1016/j.spa.2021.08.003">Long range one-cookie random walk with positive speed</a></h3>
+    <p class="paper-authors">Andrea Collevecchio, Kais Hamza, <strong>Tuan-Minh Nguyen</strong></p>
+    <p class="paper-journal">Stochastic Processes and their Applications, 142, 462–478 (2021)</p>
+    <p class="topics">Excited random walks; speed</p>
+    <p class="links"><a href="https://arxiv.org/abs/2011.00493">arXiv:2011.00493</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2011.00493">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1016/j.spa.2021.08.003">Journal / DOI</a></p>
+    <details><summary>Research summary</summary><p>We establish a sufficient condition for positive speed of a one-cookie walk that can make long jumps on its first visit to a site.</p></details>
+</article>
+
+<article class="paper" id="paper-7" data-status="published">
+    <div class="paper-meta"><span class="paper-number">[7]</span> <span>2021 · Published</span></div>
+    <h3 class="paper-title"><a href="https://doi.org/10.1214/20-AIHP1115">Strongly vertex-reinforced jump process on a complete graph</a></h3>
+    <p class="paper-authors">Olivier Raimond, <strong>Tuan-Minh Nguyen</strong></p>
+    <p class="paper-journal">Annales de l'Institut Henri Poincaré, Probabilités et Statistiques, 57(3), 1549–1568 (2021)</p>
+    <p class="topics">Reinforced processes; localization</p>
+    <p class="links"><a href="https://arxiv.org/abs/1810.06905">arXiv:1810.06905</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/1810.06905">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1214/20-AIHP1115">Journal / DOI</a></p>
+    <details><summary>Research summary</summary><p>For superlinear polynomial reinforcement on a complete graph, we prove that exactly one vertex has unbounded local time almost surely.</p></details>
+</article>
+
+<article class="paper" id="paper-6" data-status="published">
+    <div class="paper-meta"><span class="paper-number">[6]</span> <span>2020 · Published</span></div>
+    <h3 class="paper-title"><a href="https://doi.org/10.1017/jpr.2020.19">On a class of random walks in simplexes</a></h3>
+    <p class="paper-authors"><strong>Tuan-Minh Nguyen</strong>, Stanislav Volkov</p>
+    <p class="paper-journal">Journal of Applied Probability, 57(2), 409–428 (2020)</p>
+    <p class="topics">Markov chains; limit distributions</p>
+    <p class="links"><a href="https://arxiv.org/abs/1709.00174">arXiv:1709.00174</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/1709.00174">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1017/jpr.2020.19">Journal / DOI</a></p>
+    <details><summary>Research summary</summary><p>We identify Dirichlet limiting distributions for certain walks in a simplex and an arcsine limiting distribution for a related history-dependent walk on the unit interval.</p></details>
+</article>
+
+<article class="paper" id="paper-5" data-status="published">
+    <div class="paper-meta"><span class="paper-number">[5]</span> <span>2017 · Published</span></div>
+    <h3 class="paper-title"><a href="https://doi.org/10.1002/rsa.20702">A universal result for consecutive random subdivision of polygons</a></h3>
+    <p class="paper-authors"><strong>Nguyen Tuan Minh</strong>, Stanislav Volkov</p>
+    <p class="paper-journal">Random Structures &amp; Algorithms, 51(2), 341–371 (2017)</p>
+    <p class="topics">Random geometry; products of random matrices</p>
+    <p class="links"><a href="https://arxiv.org/abs/1506.04942">arXiv:1506.04942</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/1506.04942">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1002/rsa.20702">Journal / DOI</a></p>
+    <details><summary>Research summary</summary><p>We prove that consecutive random subdivisions of convex polygons lead to asymptotically flat shapes and investigate the rate of convergence, including the case of triangles.</p></details>
+</article>
+
+<article class="paper" id="paper-4" data-status="published">
+    <div class="paper-meta"><span class="paper-number">[4]</span> <span>2016 · Published</span></div>
+    <h3 class="paper-title"><a href="https://www.mathnet.ru/php/archive.phtml?jrnid=timb&amp;option_lang=eng&amp;paperid=263&amp;wshow=paper">Conservation law for the Cauchy-Navier equation of elastodynamics wave via Fourier transform</a></h3>
+    <p class="paper-authors">Victor Korzyuk, Nguyen Van Vinh, <strong>Nguyen Tuan Minh</strong></p>
+    <p class="paper-journal">Trudy Instituta Matematiki, 24(1), 100–106 (2016)</p>
+    <p class="topics">Partial differential equations; Fourier analysis</p>
+    <p class="links"><a href="https://www.mathnet.ru/php/archive.phtml?jrnid=timb&amp;option_lang=eng&amp;paperid=263&amp;wshow=paper">Journal / repository</a></p>
+    <details><summary>Research summary</summary><p>We derive a total-energy formula for the Cauchy problem for the Cauchy–Navier equation describing isotropic elastodynamics.</p></details>
+</article>
+
+<article class="paper" id="paper-3" data-status="published">
+    <div class="paper-meta"><span class="paper-number">[3]</span> <span>2012 · Published</span></div>
+    <h3 class="paper-title"><a href="https://elib.bsu.by/handle/123456789/49231">Queueing system \(\mathrm{GI}/\mathrm{M}/1\) with admission control</a></h3>
+    <p class="paper-authors"><strong>Tuan-Minh Nguyen</strong>, Alexander Dudin</p>
+    <p class="paper-journal">Vestnik Belorusskogo Gosudarstvennogo Universiteta, Ser. 1, 2012(3), 135–141 (2012)</p>
+    <p class="topics">Queueing theory</p>
+    <p class="links"><a href="https://elib.bsu.by/handle/123456789/49231">Journal / repository</a></p>
+    <details><summary>Research summary</summary><p>We study a \(\mathrm{GI}/\mathrm{M}/1\) queue with randomized threshold admission control.</p></details>
+</article>
+
+<article class="paper" id="paper-2" data-status="published">
+    <div class="paper-meta"><span class="paper-number">[2]</span> <span>2012 · Published</span></div>
+    <h3 class="paper-title"><a href="https://doi.org/10.3846/13926292.2012.734864">Classical solution of the Cauchy problem for biwave equation: Application of Fourier transform</a></h3>
+    <p class="paper-authors">Victor Korzyuk, Nguyen Van Vinh, <strong>Nguyen Tuan Minh</strong></p>
+    <p class="paper-journal">Mathematical Modelling and Analysis, 17(5), 630–641 (2012)</p>
+    <p class="topics">Partial differential equations; Fourier analysis</p>
+    <p class="links"><a href="https://arxiv.org/abs/1111.2132">arXiv:1111.2132</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/1111.2132">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.3846/13926292.2012.734864">Journal / DOI</a></p>
+    <details><summary>Research summary</summary><p>We study classical solutions of the Cauchy problem for the biwave equation using Fourier analysis.</p></details>
+</article>
+
+<article class="paper" id="paper-1" data-status="earlier">
+    <div class="paper-meta"><span class="paper-number">[1]</span> <span>2011 · Unpublished manuscript</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/1111.2140">Malliavin-Stein method for multi-dimensional U-statistics of Poisson point processes</a></h3>
+    <p class="paper-authors"><strong>Nguyen Tuan Minh</strong></p>
+    
+    <p class="topics">Poisson point processes; Malliavin calculus; Gaussian approximation</p>
+    <p class="links"><a href="https://arxiv.org/abs/1111.2140">arXiv:1111.2140</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/1111.2140">PDF</a></p>
+    <details><summary>Research summary</summary><p>We establish a bound on the distance between a Gaussian vector and a vector of Poisson U-statistics using the Malliavin–Stein method.</p></details>
+</article>
+</div>
+                <h3 style="margin: 3rem 0 1.5rem; color: #1e40af;">PhD Thesis</h3>
+                <div class="paper">
+                    <div class="paper-title">Random Geometry and Reinforced Jump Processes</div>
+                    <div class="paper-journal">Doctoral Theses in Mathematical Sciences 2017:8, Lund University, 2017. ISBN: 978-91-7753-505-8</div>
+                    <div class="links"><a href="https://lup.lub.lu.se/search/publication/1a0c3c32-10a4-4207-aba8-ce3e164f1ce3" target="_blank" rel="noopener">Lund University</a></div>
+                </div>
+
+            </div>
+
+            <div style="text-align: center;">
+                <a href="index.html" class="back-btn">← Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Tuan-Minh Nguyen. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; opacity: 0.7;">
+                Personal academic website • Hosted on GitHub Pages
+            </p>
+        </div>
+    </footer>
+<script>
+(() => {
+  const controls = document.getElementById('pub-controls');
+  const input = document.getElementById('paper-search');
+  const status = document.getElementById('paper-status');
+  const toggle = document.getElementById('toggle-summaries');
+  const count = document.getElementById('paper-count');
+  const papers = Array.from(document.querySelectorAll('#papers .paper'));
+  // Preserve searchable TeX source before MathJax replaces it with rendered mathematics.
+  const searchText = new Map(papers.map(paper => [paper, paper.textContent.toLowerCase()]));
+  const update = () => {
+    const terms = input.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+    let visible = 0;
+    papers.forEach(paper => {
+      const matches = terms.every(term => searchText.get(paper).includes(term));
+      paper.hidden = !matches || (status.value !== 'all' && paper.dataset.status !== status.value);
+      if (!paper.hidden) visible++;
+    });
+    count.textContent = visible + ' of ' + papers.length + ' papers and manuscripts';
+  };
+  input.addEventListener('input', update);
+  status.addEventListener('change', update);
+  toggle.addEventListener('click', () => {
+    const expand = toggle.getAttribute('aria-expanded') !== 'true';
+    papers.forEach(paper => { if (!paper.hidden) paper.querySelector('details').open = expand; });
+    toggle.setAttribute('aria-expanded', String(expand));
+    toggle.textContent = expand ? 'Collapse summaries' : 'Expand summaries';
+  });
+  window.addEventListener('hashchange', () => {
+    const target = document.getElementById(location.hash.slice(1));
+    if (target && target.hidden) { input.value = ''; status.value = 'all'; update(); target.scrollIntoView(); }
+  });
+  controls.hidden = false;
+})();
+</script>
+</body>
+</html>
+, '
+        :root {
+            --primary: #1e40af;
+            --dark: #0f172a;
+            --light: #f8fafc;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.7;
+            color: #334155;
+            background: #f8fafc;
+        }
+        
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            color: var(--dark);
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+        
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        .paper {
+            margin-bottom: 1.8rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .paper:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .paper-number {
+            font-weight: bold;
+            color: var(--primary);
+            margin-right: 8px;
+        }
+        
+        .paper-title {
+            font-weight: 600;
+            margin: 8px 0;
+            color: #1e2937;
+        }
+        
+        .paper-authors {
+            color: #475569;
+            font-style: italic;
+        }
+        
+        .paper-journal {
+            color: #334155;
+            margin-top: 6px;
+        }
+        
+        .links a {
+            color: var(--primary);
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        
+        .links a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            background: var(--dark);
+            color: #cbd5e1;
+            text-align: center;
+            padding: 3rem 0;
+            font-size: 0.95rem;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 10px 24px;
+            background: var(--primary);
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .back-btn:hover {
+            background: #1e3a8a;
+        }
+
+        .intro { margin: 0 0 1.25rem; }
+        .pub-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 12px; margin: 1.5rem 0 .5rem; }
+        [hidden] { display: none !important; }
+        .pub-controls > div { flex: 1 1 180px; }
+        .pub-controls label { display:block; font-size: .9rem; font-weight: 600; margin-bottom: 4px; }
+        .pub-controls input, .pub-controls select, .pub-controls button { font: inherit; font-size: .95rem; color: var(--dark); background: white; border: 1px solid #94a3b8; border-radius: 5px; padding: 9px 12px; }
+        .pub-controls input, .pub-controls select { width:100%; }
+        .pub-controls button { cursor:pointer; }
+        .count, .topics, .paper-meta { font-size: .9rem; color:#475569; }
+        .count { margin: 1rem 0; }
+        .paper { scroll-margin-top: 7rem; margin-bottom: 1.3rem; padding-bottom: 1.3rem; }
+        .paper-title { font-size: 1.2rem; line-height: 1.45; margin: .25rem 0; }
+        .paper-title a { color: var(--dark); text-decoration: none; }
+        .paper-title a:hover { text-decoration: underline; color: var(--primary); }
+        .paper-authors { font-style: normal; }
+        .paper-authors a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+        .paper-journal { font-style: italic; }
+        .topics { margin-top: .3rem; }
+        .links { margin-top: .45rem; font-size: .95rem; overflow-wrap: anywhere; }
+        .links a { margin-right: 0; }
+        details { margin-top: .4rem; font-size: .98rem; }
+        summary { cursor: pointer; color: var(--primary); width: fit-content; }
+        details p { margin: .45rem 0 .2rem; padding-left: .8rem; border-left: 2px solid #cbd5e1; }
+        a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+        @media (max-width: 600px) { h1 { font-size: 2.1rem; } section { padding: 40px 0; } .nav-links { gap: 1rem; } .paper-title { font-size: 1.1rem; } }
+        @media print { nav, .pub-controls, .back-btn, .footer { display: none; } header { background: white; color: black; padding: 0; } .paper { break-inside: avoid; } section { padding: 20px 0; } }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Tuan-Minh Nguyen</h1>
+            <p class="subtitle">Research Fellow in Probability Theory</p>
+            <p style="margin-top: 1rem; opacity: 0.85;">School of Mathematics, Monash University</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-links">
+                <a href="index.html">About</a>
+                <a href="index.html#research">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Publications Section -->
+    <section>
+        <div class="container">
+            <h2>Publications and Preprints</h2>
+            <div class="content">
+
+<p class="intro">Papers and preprints, listed in reverse order of the existing publication numbering. Select a paper title or a link to read the article; expand the research summary for a short description of its results.</p>
+<div class="pub-controls" id="pub-controls" hidden>
+  <div><label for="paper-search">Search papers</label><input type="search" id="paper-search" placeholder="Title, author, topic, year"></div>
+  <div><label for="paper-status">Publication status</label><select id="paper-status"><option value="all">All papers</option><option value="published">Published</option><option value="forthcoming">Forthcoming</option><option value="preprint">Preprints</option><option value="earlier">Earlier drafts / manuscripts</option></select></div>
+  <button type="button" id="toggle-summaries" aria-expanded="false">Expand summaries</button>
+</div>
+<p id="paper-count" class="count" aria-live="polite">20 papers and manuscripts</p>
+<div id="papers">
+<article class="paper" id="paper-20" data-status="preprint">
+    <div class="paper-meta"><span class="paper-number">[20]</span> <span>2026 · Preprint</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/2610.40084">Multi-excited random walks on general trees</a></h3>
+    <p class="paper-authors">Jack Mills, <strong>Tuan-Minh Nguyen</strong></p>
+    
+    <p class="topics">Excited random walks; trees</p>
+    <p class="links"><a href="https://arxiv.org/abs/2610.40084">arXiv:2610.40084</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2610.40084">PDF</a></p>
+    <details><summary>Research summary</summary><p>Recurrence and transience of multi-excited walks on locally finite trees, with a critical threshold described by the branching-ruin number.</p></details>
+</article>
+
+<article class="paper" id="paper-19" data-status="preprint">
+    <div class="paper-meta"><span class="paper-number">[19]</span> <span>2026 · Preprint</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/2610.10162">Limit shapes for centrally excited walks</a></h3>
+    <p class="paper-authors"><a href="https://nitromannitol.github.io/">Ahmed Bou-Rabee</a>, <strong>Tuan-Minh Nguyen</strong>, Yuval Peres, <a href="https://www.cmap.polytechnique.fr/~arvind.singh/research.html">Arvind Singh</a></p>
+    
+    <p class="topics">Excited random walks; limit shapes</p>
+    <p class="links"><a href="https://arxiv.org/abs/2610.10162">arXiv:2610.10162</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2610.10162">PDF</a></p>
+    <details><summary>Research summary</summary><p>We study walks whose first departure from each nonzero site has a drift toward the origin and establish limit-shape results.</p></details>
+</article>
+
+<article class="paper" id="paper-18" data-status="earlier">
+    <div class="paper-meta"><span class="paper-number">[18]</span> <span>2026 · Earlier draft</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/2610.07724">Shape theorem for excited random walks on the integer lattice</a></h3>
+    <p class="paper-authors"><strong>Tuan-Minh Nguyen</strong></p>
+    
+    <p class="topics">Excited random walks; limit shapes</p>
+    <p class="links"><a href="https://arxiv.org/abs/2610.07724">arXiv:2610.07724</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2610.07724">PDF</a></p>
+    <details><summary>Research summary</summary><p>An earlier independent draft of the work on centrally excited walks. For the subsequent joint work, see <a href="#paper-19">[19]</a>.</p></details>
+</article>
+
+<article class="paper" id="paper-17" data-status="preprint">
+    <div class="paper-meta"><span class="paper-number">[17]</span> <span>2026 · Preprint</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/2609.11046">Recurrence and transience of random walks with drift ρx<sup>α</sup>/t<sup>β</sup></a></h3>
+    <p class="paper-authors">Ngo P. N. Ngoc, <strong>Tuan-Minh Nguyen</strong></p>
+    
+    <p class="topics">Random walks with drift; recurrence and transience</p>
+    <p class="links"><a href="https://arxiv.org/abs/2609.11046">arXiv:2609.11046</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2609.11046">PDF</a></p>
+    <details><summary>Research summary</summary><p>We study recurrence and transience for walks whose conditional drift depends polynomially on their position and time.</p></details>
+</article>
+
+<article class="paper" id="paper-16" data-status="preprint">
+    <div class="paper-meta"><span class="paper-number">[16]</span> <span>2026 · Preprint</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/2608.21701">Superdiffusivity of random walks on the three-dimensional randomly oriented Manhattan lattice</a></h3>
+    <p class="paper-authors"><strong>Tuan-Minh Nguyen</strong></p>
+    
+    <p class="topics">Random walks in random environments; superdiffusivity</p>
+    <p class="links"><a href="https://arxiv.org/abs/2608.21701">arXiv:2608.21701</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2608.21701">PDF</a></p>
+    <details><summary>Research summary</summary><p>We establish that in dimension three the diffusion coefficient grows, in the Tauberian sense, as the square root of the logarithm of time, up to iterated-logarithmic corrections.</p></details>
+</article>
+
+<article class="paper" id="paper-15" data-status="preprint">
+    <div class="paper-meta"><span class="paper-number">[15]</span> <span>2026 · Preprint</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/2605.17725">Limit theorems for random walks with spatio-temporal drift</a></h3>
+    <p class="paper-authors">Ngo P. N. Ngoc, <strong>Tuan-Minh Nguyen</strong></p>
+    
+    <p class="topics">Random walks with drift; limit theorems</p>
+    <p class="links"><a href="https://arxiv.org/abs/2605.17725">arXiv:2605.17725</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2605.17725">PDF</a></p>
+    <details><summary>Research summary</summary><p>We establish phase transitions for walks with time-dependent and position-dependent drift. The limiting behavior includes Gaussian and non-Gaussian limits and almost sure localization on a hypersphere.</p></details>
+</article>
+
+<article class="paper" id="paper-14" data-status="preprint">
+    <div class="paper-meta"><span class="paper-number">[14]</span> <span>2026 · Preprint</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/2604.24389">&quot;True&quot; self-avoiding walks on general trees</a></h3>
+    <p class="paper-authors"><strong>Tuan-Minh Nguyen</strong></p>
+    
+    <p class="topics">Self-avoiding walks; trees</p>
+    <p class="links"><a href="https://arxiv.org/abs/2604.24389">arXiv:2604.24389</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2604.24389">PDF</a></p>
+    <details><summary>Research summary</summary><p>For exponentially decreasing edge weights, we prove transience when the branching-ruin number exceeds 1/2 and recurrence when it is below 1/2, resolving a question of Kosygina.</p></details>
+</article>
+
+<article class="paper" id="paper-13" data-status="preprint">
+    <div class="paper-meta"><span class="paper-number">[13]</span> <span>2026 · Preprint</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/2602.16934">Once-excited random walks on general trees</a></h3>
+    <p class="paper-authors">Duy-Bao Le, <strong>Tuan-Minh Nguyen</strong></p>
+    
+    <p class="topics">Excited random walks; trees</p>
+    <p class="links"><a href="https://arxiv.org/abs/2602.16934">arXiv:2602.16934</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2602.16934">PDF</a></p>
+    <details><summary>Research summary</summary><p>We establish a recurrence–transience phase transition for once-excited walks on trees with polynomial growth and independent random biases, in terms of the branching-ruin number.</p></details>
+</article>
+
+<article class="paper" id="paper-12" data-status="preprint">
+    <div class="paper-meta"><span class="paper-number">[12]</span> <span>2024 · Preprint</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/2401.04366">Strongly vertex-reinforced jump process on graphs with bounded degree</a></h3>
+    <p class="paper-authors">Andrea Collevecchio, <strong>Tuan-Minh Nguyen</strong></p>
+    
+    <p class="topics">Reinforced processes; localization</p>
+    <p class="links"><a href="https://arxiv.org/abs/2401.04366">arXiv:2401.04366</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2401.04366">PDF</a></p>
+    <details><summary>Research summary</summary><p>We prove finiteness of the visited set for nondecreasing reinforcement with integrable reciprocal. For reinforcement comparable to a superlinear polynomial, the process eventually remains on a star with a unique vertex of unbounded local time.</p></details>
+</article>
+
+<article class="paper" id="paper-11" data-status="forthcoming">
+    <div class="paper-meta"><span class="paper-number">[11]</span> <span>2024 (preprint year) · Forthcoming</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/2406.09732">Finding pure Nash equilibria in large random games</a></h3>
+    <p class="paper-authors">Andrea Collevecchio, <strong>Tuan-Minh Nguyen</strong>, Ziwen Zhong</p>
+    <p class="paper-journal">Mathematics of Operations Research (to appear)</p>
+    <p class="topics">Random games; random walks on hypercubes</p>
+    <p class="links"><a href="https://arxiv.org/abs/2406.09732">arXiv:2406.09732</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2406.09732">PDF</a></p>
+    <details><summary>Research summary</summary><p>We study random games with two actions per player and independent payoffs, allowing ties. Best response dynamics and other nearest-neighbor walks reach a pure Nash equilibrium before hitting a trap with high probability.</p></details>
+</article>
+
+<article class="paper" id="paper-10" data-status="published">
+    <div class="paper-meta"><span class="paper-number">[10]</span> <span>2022 · Published</span></div>
+    <h3 class="paper-title"><a href="https://doi.org/10.1214/21-AAP1743">Vertex-reinforced jump process on the integers with nonlinear reinforcement</a></h3>
+    <p class="paper-authors">Andrea Collevecchio, <strong>Tuan-Minh Nguyen</strong>, Stanislav Volkov</p>
+    <p class="paper-journal">Annals of Applied Probability, 32(4), 2671–2705 (2022)</p>
+    <p class="topics">Reinforced processes; recurrence and localization</p>
+    <p class="links"><a href="https://arxiv.org/abs/2004.05927">arXiv:2004.05927</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2004.05927">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1214/21-AAP1743">Journal / DOI</a></p>
+    <details><summary>Research summary</summary><p>We establish recurrence for reinforcement with nonintegrable reciprocal, and localization on three vertices under an additional regularity condition in the integrable case. Only one vertex then has unbounded local time.</p></details>
+</article>
+
+<article class="paper" id="paper-9" data-status="published">
+    <div class="paper-meta"><span class="paper-number">[9]</span> <span>2022 · Published</span></div>
+    <h3 class="paper-title"><a href="https://doi.org/10.1007/s10955-022-02926-2">Speed of excited random walks with long backward steps</a></h3>
+    <p class="paper-authors"><strong>Tuan-Minh Nguyen</strong></p>
+    <p class="paper-journal">Journal of Statistical Physics, 188(1), Article 3 (2022)</p>
+    <p class="topics">Excited random walks; speed; branching processes</p>
+    <p class="links"><a href="https://arxiv.org/abs/2103.10610">arXiv:2103.10610</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2103.10610">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1007/s10955-022-02926-2">Journal / DOI</a></p>
+    <details><summary>Research summary</summary><p>For a multi-excited walk with bounded backward jumps, we prove that in the right-transient regime the speed is positive exactly when the expected total drift per site exceeds two.</p></details>
+</article>
+
+<article class="paper" id="paper-8" data-status="published">
+    <div class="paper-meta"><span class="paper-number">[8]</span> <span>2021 · Published</span></div>
+    <h3 class="paper-title"><a href="https://doi.org/10.1016/j.spa.2021.08.003">Long range one-cookie random walk with positive speed</a></h3>
+    <p class="paper-authors">Andrea Collevecchio, Kais Hamza, <strong>Tuan-Minh Nguyen</strong></p>
+    <p class="paper-journal">Stochastic Processes and their Applications, 142, 462–478 (2021)</p>
+    <p class="topics">Excited random walks; speed</p>
+    <p class="links"><a href="https://arxiv.org/abs/2011.00493">arXiv:2011.00493</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/2011.00493">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1016/j.spa.2021.08.003">Journal / DOI</a></p>
+    <details><summary>Research summary</summary><p>We establish a sufficient condition for positive speed of a one-cookie walk that can make long jumps on its first visit to a site.</p></details>
+</article>
+
+<article class="paper" id="paper-7" data-status="published">
+    <div class="paper-meta"><span class="paper-number">[7]</span> <span>2021 · Published</span></div>
+    <h3 class="paper-title"><a href="https://doi.org/10.1214/20-AIHP1115">Strongly vertex-reinforced jump process on a complete graph</a></h3>
+    <p class="paper-authors">Olivier Raimond, <strong>Tuan-Minh Nguyen</strong></p>
+    <p class="paper-journal">Annales de l'Institut Henri Poincaré, Probabilités et Statistiques, 57(3), 1549–1568 (2021)</p>
+    <p class="topics">Reinforced processes; localization</p>
+    <p class="links"><a href="https://arxiv.org/abs/1810.06905">arXiv:1810.06905</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/1810.06905">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1214/20-AIHP1115">Journal / DOI</a></p>
+    <details><summary>Research summary</summary><p>For superlinear polynomial reinforcement on a complete graph, we prove that exactly one vertex has unbounded local time almost surely.</p></details>
+</article>
+
+<article class="paper" id="paper-6" data-status="published">
+    <div class="paper-meta"><span class="paper-number">[6]</span> <span>2020 · Published</span></div>
+    <h3 class="paper-title"><a href="https://doi.org/10.1017/jpr.2020.19">On a class of random walks in simplexes</a></h3>
+    <p class="paper-authors"><strong>Tuan-Minh Nguyen</strong>, Stanislav Volkov</p>
+    <p class="paper-journal">Journal of Applied Probability, 57(2), 409–428 (2020)</p>
+    <p class="topics">Markov chains; limit distributions</p>
+    <p class="links"><a href="https://arxiv.org/abs/1709.00174">arXiv:1709.00174</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/1709.00174">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1017/jpr.2020.19">Journal / DOI</a></p>
+    <details><summary>Research summary</summary><p>We identify Dirichlet limiting distributions for certain walks in a simplex and an arcsine limiting distribution for a related history-dependent walk on the unit interval.</p></details>
+</article>
+
+<article class="paper" id="paper-5" data-status="published">
+    <div class="paper-meta"><span class="paper-number">[5]</span> <span>2017 · Published</span></div>
+    <h3 class="paper-title"><a href="https://doi.org/10.1002/rsa.20702">A universal result for consecutive random subdivision of polygons</a></h3>
+    <p class="paper-authors"><strong>Nguyen Tuan Minh</strong>, Stanislav Volkov</p>
+    <p class="paper-journal">Random Structures &amp; Algorithms, 51(2), 341–371 (2017)</p>
+    <p class="topics">Random geometry; products of random matrices</p>
+    <p class="links"><a href="https://arxiv.org/abs/1506.04942">arXiv:1506.04942</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/1506.04942">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1002/rsa.20702">Journal / DOI</a></p>
+    <details><summary>Research summary</summary><p>We prove that consecutive random subdivisions of convex polygons lead to asymptotically flat shapes and investigate the rate of convergence, including the case of triangles.</p></details>
+</article>
+
+<article class="paper" id="paper-4" data-status="published">
+    <div class="paper-meta"><span class="paper-number">[4]</span> <span>2016 · Published</span></div>
+    <h3 class="paper-title"><a href="https://www.mathnet.ru/php/archive.phtml?jrnid=timb&amp;option_lang=eng&amp;paperid=263&amp;wshow=paper">Conservation law for the Cauchy-Navier equation of elastodynamics wave via Fourier transform</a></h3>
+    <p class="paper-authors">Victor Korzyuk, Nguyen Van Vinh, <strong>Nguyen Tuan Minh</strong></p>
+    <p class="paper-journal">Trudy Instituta Matematiki, 24(1), 100–106 (2016)</p>
+    <p class="topics">Partial differential equations; Fourier analysis</p>
+    <p class="links"><a href="https://www.mathnet.ru/php/archive.phtml?jrnid=timb&amp;option_lang=eng&amp;paperid=263&amp;wshow=paper">Journal / repository</a></p>
+    <details><summary>Research summary</summary><p>We derive a total-energy formula for the Cauchy problem for the Cauchy–Navier equation describing isotropic elastodynamics.</p></details>
+</article>
+
+<article class="paper" id="paper-3" data-status="published">
+    <div class="paper-meta"><span class="paper-number">[3]</span> <span>2012 · Published</span></div>
+    <h3 class="paper-title"><a href="https://elib.bsu.by/handle/123456789/49231">Queueing system \(\mathrm{GI}/\mathrm{M}/1\) with admission control</a></h3>
+    <p class="paper-authors"><strong>Tuan-Minh Nguyen</strong>, Alexander Dudin</p>
+    <p class="paper-journal">Vestnik Belorusskogo Gosudarstvennogo Universiteta, Ser. 1, 2012(3), 135–141 (2012)</p>
+    <p class="topics">Queueing theory</p>
+    <p class="links"><a href="https://elib.bsu.by/handle/123456789/49231">Journal / repository</a></p>
+    <details><summary>Research summary</summary><p>We study a \(\mathrm{GI}/\mathrm{M}/1\) queue with randomized threshold admission control.</p></details>
+</article>
+
+<article class="paper" id="paper-2" data-status="published">
+    <div class="paper-meta"><span class="paper-number">[2]</span> <span>2012 · Published</span></div>
+    <h3 class="paper-title"><a href="https://doi.org/10.3846/13926292.2012.734864">Classical solution of the Cauchy problem for biwave equation: Application of Fourier transform</a></h3>
+    <p class="paper-authors">Victor Korzyuk, Nguyen Van Vinh, <strong>Nguyen Tuan Minh</strong></p>
+    <p class="paper-journal">Mathematical Modelling and Analysis, 17(5), 630–641 (2012)</p>
+    <p class="topics">Partial differential equations; Fourier analysis</p>
+    <p class="links"><a href="https://arxiv.org/abs/1111.2132">arXiv:1111.2132</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/1111.2132">PDF</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.3846/13926292.2012.734864">Journal / DOI</a></p>
+    <details><summary>Research summary</summary><p>We study classical solutions of the Cauchy problem for the biwave equation using Fourier analysis.</p></details>
+</article>
+
+<article class="paper" id="paper-1" data-status="earlier">
+    <div class="paper-meta"><span class="paper-number">[1]</span> <span>2011 · Unpublished manuscript</span></div>
+    <h3 class="paper-title"><a href="https://arxiv.org/abs/1111.2140">Malliavin-Stein method for multi-dimensional U-statistics of Poisson point processes</a></h3>
+    <p class="paper-authors"><strong>Nguyen Tuan Minh</strong></p>
+    
+    <p class="topics">Poisson point processes; Malliavin calculus; Gaussian approximation</p>
+    <p class="links"><a href="https://arxiv.org/abs/1111.2140">arXiv:1111.2140</a> <span aria-hidden="true">·</span> <a href="https://arxiv.org/pdf/1111.2140">PDF</a></p>
+    <details><summary>Research summary</summary><p>We establish a bound on the distance between a Gaussian vector and a vector of Poisson U-statistics using the Malliavin–Stein method.</p></details>
+</article>
+</div>
+                <h3 style="margin: 3rem 0 1.5rem; color: #1e40af;">PhD Thesis</h3>
+                <div class="paper">
+                    <div class="paper-title">Random Geometry and Reinforced Jump Processes</div>
+                    <div class="paper-journal">Doctoral Theses in Mathematical Sciences 2017:8, Lund University, 2017. ISBN: 978-91-7753-505-8</div>
+                    <div class="links"><a href="https://lup.lub.lu.se/search/publication/1a0c3c32-10a4-4207-aba8-ce3e164f1ce3" target="_blank" rel="noopener">Lund University</a></div>
+                </div>
+
+            </div>
+
+            <div style="text-align: center;">
+                <a href="index.html" class="back-btn">← Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Tuan-Minh Nguyen. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; opacity: 0.7;">
+                Personal academic website • Hosted on GitHub Pages
+            </p>
+        </div>
+    </footer>
+<script>
+(() => {
+  const controls = document.getElementById('pub-controls');
+  const input = document.getElementById('paper-search');
+  const status = document.getElementById('paper-status');
+  const toggle = document.getElementById('toggle-summaries');
+  const count = document.getElementById('paper-count');
+  const papers = Array.from(document.querySelectorAll('#papers .paper'));
+  const update = () => {
+    const terms = input.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+    let visible = 0;
+    papers.forEach(paper => {
+      const matches = terms.every(term => paper.textContent.toLowerCase().includes(term));
+      paper.hidden = !matches || (status.value !== 'all' && paper.dataset.status !== status.value);
+      if (!paper.hidden) visible++;
+    });
+    count.textContent = visible + ' of ' + papers.length + ' papers and manuscripts';
+  };
+  input.addEventListener('input', update);
+  status.addEventListener('change', update);
+  toggle.addEventListener('click', () => {
+    const expand = toggle.getAttribute('aria-expanded') !== 'true';
+    papers.forEach(paper => { if (!paper.hidden) paper.querySelector('details').open = expand; });
+    toggle.setAttribute('aria-expanded', String(expand));
+    toggle.textContent = expand ? 'Collapse summaries' : 'Expand summaries';
+  });
+  window.addEventListener('hashchange', () => {
+    const target = document.getElementById(location.hash.slice(1));
+    if (target && target.hidden) { input.value = ''; status.value = 'all'; update(); target.scrollIntoView(); }
+  });
+  controls.hidden = false;
+})();
+</script>
+</body>
+</html>
+]],
+                displayMath: [['\\[', '\\]'], ['$', '$']],
+                processEscapes: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
     <style>
         :root {
             --primary: #1e40af;
@@ -388,12 +1346,12 @@
 
 <article class="paper" id="paper-3" data-status="published">
     <div class="paper-meta"><span class="paper-number">[3]</span> <span>2012 · Published</span></div>
-    <h3 class="paper-title"><a href="https://elib.bsu.by/handle/123456789/49231">Queueing system GI/M/1 with admission control</a></h3>
+    <h3 class="paper-title"><a href="https://elib.bsu.by/handle/123456789/49231">Queueing system \(\mathrm{GI}/\mathrm{M}/1\) with admission control</a></h3>
     <p class="paper-authors"><strong>Tuan-Minh Nguyen</strong>, Alexander Dudin</p>
     <p class="paper-journal">Vestnik Belorusskogo Gosudarstvennogo Universiteta, Ser. 1, 2012(3), 135–141 (2012)</p>
     <p class="topics">Queueing theory</p>
     <p class="links"><a href="https://elib.bsu.by/handle/123456789/49231">Journal / repository</a></p>
-    <details><summary>Research summary</summary><p>We study a GI/M/1 queue with randomized threshold admission control.</p></details>
+    <details><summary>Research summary</summary><p>We study a \(\mathrm{GI}/\mathrm{M}/1\) queue with randomized threshold admission control.</p></details>
 </article>
 
 <article class="paper" id="paper-2" data-status="published">
