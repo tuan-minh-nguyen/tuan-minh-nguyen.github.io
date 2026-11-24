@@ -15,7 +15,7 @@ a{color:var(--primary);text-decoration-thickness:1px;text-underline-offset:3px}
 a:hover{color:#0d4055}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--primary);outline-offset:4px}
 .container{width:min(1120px,100%);padding-inline:clamp(22px,5vw,56px);margin-inline:auto}
-header{background:linear-gradient(90deg,rgba(9,22,32,.06),rgba(9,22,32,.28) 43%,rgba(9,22,32,.74)),#14232f url("images/dice-header.webp") center 45%/cover no-repeat;color:white;min-height:300px;display:flex;align-items:center;padding:48px 0}
+header{background:linear-gradient(90deg,rgba(9,22,32,.06),rgba(9,22,32,.28) 43%,rgba(9,22,32,.74)),#14232f url("images/dice-header.webp") center 45%/cover no-repeat;color:white;height:210px;min-height:210px;display:flex;align-items:center;padding:16px 0}
 header .container{padding-left:clamp(250px,43vw,520px);text-align:left}
 header h1{font:600 clamp(2.2rem,4vw,3.65rem)/1.12 var(--serif);letter-spacing:-.035em;margin-bottom:12px;color:#fff;text-shadow:0 2px 12px #07111d80}
 header .subtitle{font-size:clamp(1.05rem,1.7vw,1.35rem);font-weight:500;color:#e5edf0;line-height:1.45}
@@ -78,9 +78,9 @@ details[open] summary{margin-bottom:9px}
 .content .paper .abstract-text{font:400 1.02rem/1.75 var(--serif);color:var(--ink);padding:8px 0 8px 17px;border-left:2px solid #afc9ce;overflow-wrap:break-word}
 .abstract-source{font-size:.85rem;color:var(--muted)}
 mjx-container[display="true"]{overflow-x:auto;overflow-y:hidden;max-width:100%}
-@media(max-width:700px){body{font-size:17px}header{min-height:245px;background-position:28% center;padding:32px 0}header .container{padding-left:38%;padding-right:15px}header h1{font-size:clamp(1.6rem,5vw,2.25rem)}header .subtitle{font-size:1rem}header p:last-child{font-size:.85rem}.nav-links{gap:8px 20px}.nav-links a{font-size:.94rem;padding:11px 0 9px}.about-layout{flex-direction:column;align-items:center}.profile-photo{flex:none;width:170px}.about-text{width:100%}#papers .paper{padding:18px 14px 20px 49px}.paper-number{left:10px;top:20px;font-size:.92rem}.paper-title{font-size:1.13rem}.pub-controls{padding:14px}.pub-controls button{width:100%}.content .paper .abstract-text{padding-left:11px}}
+@media(max-width:700px){body{font-size:17px}header{height:172px;min-height:172px;background-position:28% center;padding:12px 0}header .container{padding-left:38%;padding-right:15px}header h1{font-size:clamp(1.6rem,5vw,2.25rem)}header .subtitle{font-size:1rem}header p:last-child{font-size:.85rem}.nav-links{gap:8px 20px}.nav-links a{font-size:.94rem;padding:11px 0 9px}.about-layout{flex-direction:column;align-items:center}.profile-photo{flex:none;width:170px}.about-text{width:100%}#papers .paper{padding:18px 14px 20px 49px}.paper-number{left:10px;top:20px;font-size:.92rem}.paper-title{font-size:1.13rem}.pub-controls{padding:14px}.pub-controls button{width:100%}.content .paper .abstract-text{padding-left:11px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-@media print{body{background:white;color:black;font-size:11pt}header{min-height:0;background:none!important;color:black;padding:0}header .container{padding:0}header h1,header p,header .subtitle{color:black!important;text-shadow:none}nav,.pub-controls,.back-btn,.footer{display:none}section{padding:15px 0}#papers .paper{break-inside:avoid;padding:12px 12px 12px 45px}.paper-title{color:black}}
+@media print{body{background:white;color:black;font-size:11pt}header{height:auto;min-height:0;background:none!important;color:black;padding:0}header .container{padding:0}header h1,header p,header .subtitle{color:black!important;text-shadow:none}nav,.pub-controls,.back-btn,.footer{display:none}section{padding:15px 0}#papers .paper{break-inside:avoid;padding:12px 12px 12px 45px}.paper-title{color:black}}
 </style>
 </head>
 <body>
