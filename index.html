@@ -125,6 +125,12 @@
         .btn:hover {
             background: #1e3a8a;
         }
+        .content p + p { margin-top: 1rem; }
+        .content a:not(.btn) { color: var(--primary); text-underline-offset: 3px; }
+        .research-list li { margin-bottom: .85rem; }
+        .content h3 { margin-top: 1.5rem; color: var(--dark); }
+        section[id] { scroll-margin-top: 6rem; }
+        @media (max-width: 600px) { h1 { font-size: 2.2rem; } section { padding: 40px 0; } .nav-links { gap: .75rem 1rem; } }
     </style>
 </head>
 <body>
@@ -144,85 +150,102 @@
                 <a href="index.html">About</a>
                 <a href="#research">Research Interests</a>
                 <a href="publications.html">Publications</a>
+                <a href="#talks">Talks</a>
+                <a href="#peer-review">Peer Review</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <h2>About Me</h2>
             <div class="content">
-                <p>My name is <strong>Tuan-Minh Nguyen</strong> (Vietnamese: Nguyễn Tuấn Minh), also written as Minh Nguyen. My surname Nguyen is pronounced approximately /ŋwien/ or /ŋuen/. I am currently a Research Fellow in Probability Theory at the School of Mathematics, Monash University, Australia.</p>
-                
-                <p>I was born in Hue, Vietnam. I completed my PhD under the supervision of Professor Stanislav Volkov at Lund University, Sweden. Prior to that, I earned my undergraduate degree at Belarusian State University.</p>
+                <p>My name is <strong>Tuan-Minh Nguyen</strong> (Nguyễn Tuấn Minh in Vietnamese), also known as Minh Nguyen. My surname Nguyen is pronounced approximately /ŋwien/ or /ŋuen/. I am a research fellow in probability theory at the School of Mathematics, Monash University, Australia.</p>
+                <p>I was born in Hue, Vietnam. Before moving to Australia, I completed my doctorate at Lund University in Sweden, supervised by Professor Stanislav Volkov. I received my undergraduate diploma from Belarusian State University.</p>
             </div>
         </div>
     </section>
 
-    <!-- Research Interests -->
     <section id="research" class="research">
         <div class="container">
             <h2>Research Interests</h2>
             <div class="content">
-                <p>Probability theory is my primary area of research. I focus on random processes on graphs, particularly <strong>self-interacting random processes</strong> — stochastic models whose future behavior depends on their current state, past trajectories, or surrounding environment.</p>
-                
-                <p>Key examples include:</p>
-                <ul>
-                    <li><strong>Random walks with reinforcement:</strong> localization of vertex-reinforced jump processes on <a href="https://arxiv.org/abs/1810.06905">complete graphs</a>, <a href="https://arxiv.org/abs/2004.05927">the integers</a>, and <a href="https://arxiv.org/abs/2401.04366">graphs of bounded degree</a>.</li>
-                    <li><strong>Random walks with repulsion:</strong> recurrence and transience of <a href="https://arxiv.org/abs/2604.24389">true self-avoiding walks on trees</a>.</li>
-                    <li><strong>Excited random walks:</strong> recurrence and transience on trees (<a href="https://arxiv.org/abs/2602.16934">once-excited</a> and <a href="https://arxiv.org/abs/2610.40084">multi-excited</a> walks), speed of walks with <a href="https://arxiv.org/abs/2103.10610">long backward steps</a> and <a href="https://arxiv.org/abs/2011.00493">long-range jumps</a>, and <a href="https://arxiv.org/abs/2610.10162">limit shapes for centrally excited walks</a>.</li>
-                    <li><strong>Random walks in random environments:</strong> <a href="https://arxiv.org/abs/2608.21701">superdiffusivity on the randomly oriented Manhattan lattice</a> and <a href="https://arxiv.org/abs/2406.09732">randomly oriented hypercubes and pure Nash equilibria in random games</a>.</li>
+                <p>My main research area is probability theory, with an emphasis on random processes on graphs and self-interacting random processes. In these models, the evolution of a process may depend on its past as well as its present position and environment.</p>
+                <ul class="research-list">
+                    <li><strong>Random walks with reinforcement.</strong> The walk is more likely to return to previously visited vertices or edges. My work concerns the localisation of vertex-reinforced jump processes on <a href="publications.html#paper-7">complete graphs</a>, <a href="publications.html#paper-10">the integers</a> and <a href="publications.html#paper-12">graphs with bounded degree</a>.</li>
+                    <li><strong>Random walks with repulsion.</strong> Previous visits or traversals reduce the likelihood of returning to the corresponding vertices or edges. I study the recurrence–transience phase transition of <a href="publications.html#paper-14">true self-avoiding walks on general trees</a>.</li>
+                    <li><strong>Excited random walks.</strong> The transition probabilities depend on the number of previous visits to a vertex. My research includes recurrence and transience of <a href="publications.html#paper-13">once-excited walks on trees</a>, positive speed of excited walks on the integers with <a href="publications.html#paper-8">long-range jumps</a> or <a href="publications.html#paper-9">long backward steps</a>, and <a href="publications.html#paper-19">limit shapes for centrally excited walks</a>.</li>
+                    <li><strong>Random walks in random environments.</strong> The transition probabilities are determined by a random environment, which may have independent or correlated values at different vertices. My work includes <a href="publications.html#paper-16">superdiffusivity on the three-dimensional randomly oriented Manhattan lattice</a> and <a href="publications.html#paper-11">walks on randomly oriented hypercubes</a>, with applications to pure Nash equilibria in random games.</li>
+                    <li><strong>Random walks with spatio-temporal drift.</strong> I study <a href="publications.html#paper-15">limit theorems</a> and <a href="publications.html#paper-17">recurrence and transience</a> for walks whose drift depends on both position and time.</li>
                 </ul>
-                
-                <p>I am also interested in random graphs, percolation theory, branching processes, random games, random matrices, queueing theory, point processes, SPDEs, and Malliavin calculus.</p>
+                <p>My other interests include random graphs, percolation, branching processes, random games and matrices, queueing theory, point processes, stochastic partial differential equations and Malliavin calculus.</p>
             </div>
         </div>
     </section>
 
-    <!-- Publications Teaser -->
-    <section style="background: white;">
+    <section id="publications" class="about">
         <div class="container">
             <h2>Publications</h2>
             <div class="content" style="text-align: center;">
-                <p>I have published papers in journals such as <em>Annals of Applied Probability</em>, <em>Stochastic Processes and their Applications</em>, <em>Annales de l'Institut Henri Poincaré</em>, and others.</p>
-                
-                <a href="publications.html" class="btn">View All Publications</a>
+                <p>For the full list of papers, preprints, and my doctoral thesis, including abstracts and links, see my research publications.</p>
+                <a href="publications.html" class="btn">Publications and Preprints</a>
             </div>
         </div>
     </section>
 
-    <section id="peer-review" style="background: #f1f5f9;">
+    <section id="talks" class="research">
+        <div class="container">
+            <h2>Talks and Research Activities</h2>
+            <div class="content">
+                <h3>Talks</h3>
+                <ul class="research-list">
+                    <li>18 June 2026 — Phase transition of “true” self-avoiding walks on general trees. Bloomsbury Probability Seminar, UCL (online).</li>
+                    <li>17 October 2023 — Random walk in random environment on trees with polynomial growth. Monash Probability and Statistics Seminar.</li>
+                    <li>6–9 December 2022 — Speed of excited random walks with non-nearest-neighbour steps. 66th Annual Meeting of the Australian Mathematical Society, UNSW, Sydney.</li>
+                    <li>14 November 2017 — Strongly vertex-reinforced jump processes on complete graphs. Probability and Statistics Seminar, Uppsala University.</li>
+                    <li>2–14 July 2017 — Strongly vertex-reinforced jump processes on complete graphs. 47th Saint-Flour Probability Summer School, France.</li>
+                    <li>15 May 2017 — Strongly vertex-reinforced jump processes on complete graphs. PhD Seminar, Lund University.</li>
+                    <li>1–4 February 2016 — Random subdivision of polygons. New Developments in Processes with Reinforcement, Heilbronn Institute, Bristol.</li>
+                    <li>22 May 2015 — A universal result for consecutive random subdivision of polygons. Statistics Seminar, Lund University.</li>
+                    <li>5–9 November 2012 — Malliavin-Stein method for multi-dimensional U-statistics of Poisson point processes. XI Belarusian Mathematical Conference, Minsk.</li>
+                    <li>31 October–3 November 2011 — Queueing system GI/M/1 with randomized threshold admission control. CSIST'2011, Minsk.</li>
+                </ul>
+                <h3>Research Schools, Visits and Workshops</h3>
+                <ul class="research-list">
+                    <li>6–10 January 2025 — Probabilistic Models in Evolutionary Biology and Game Theory, Creswick, Australia.</li>
+                    <li>December 2024 — Stochastic Systems for Anomalous Diffusion, Isaac Newton Institute, Cambridge.</li>
+                    <li>5–11 March 2023 — MATRIX-MFO Tandem Workshop: Stochastic Reinforcement Processes and Graphs, Creswick.</li>
+                    <li>19–23 March 2018 — ERC Ichaos Working Group, Institut d’Études Scientifiques de Cargèse, France.</li>
+                    <li>4–8 April 2016 — UK Easter Probability Meeting: Random Structures Arising in Physics and Analysis, Lancaster University.</li>
+                    <li>5–10 July 2015 — LMS-CMI Research School: Developments in Modern Probability, Oxford University.</li>
+                    <li>25 August–2 September 2014 — School on Random Geometry and Random Matrices, ICTP-SAIFR, São Paulo.</li>
+                    <li>19–30 August 2013 — School on Mathematical Statistical Physics, Prague.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="peer-review" class="about">
         <div class="container">
             <h2>Peer Review Experience</h2>
             <div class="content">
-                <p>I have reviewed papers for <em>Stochastic Processes and their Applications</em>, <em>Bernoulli</em>, <em>Advances in Applied Probability</em>, <em>Electronic Journal of Probability</em>, and <em>Journal of Theoretical Probability</em>.</p>
+                <p>I have reviewed papers for probability journals including <em>Stochastic Processes and their Applications</em>, <em>Bernoulli</em>, <em>Advances in Applied Probability</em>, <em>Electronic Journal of Probability</em> and <em>Journal of Theoretical Probability</em>.</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
+    <section id="contact" class="research">
         <div class="container">
             <h2>Contact</h2>
-            <div class="content" style="text-align: center;">
-                <p><strong>Office:</strong><br>
-                Room 447, Level 4<br>
-                School of Mathematics, Monash University<br>
+            <div class="content">
+                <p><strong>Office address:</strong><br>
+                Room 447, Level 4, School of Mathematics, Monash University<br>
                 Clayton Campus, 9 Rainforest Walk<br>
                 Victoria 3800, Australia</p>
-                
-                <p style="margin-top: 2rem;">
-                    <strong>Email:</strong><br>
-                    tuanminh.nguyen@monash.edu<br>
-                    minhnguyen@yandex.com
-                </p>
-                
-                <p style="margin-top: 2rem;">
-                    Google Sites: <a href="https://sites.google.com/site/minhbsu/">Academic homepage</a><br>
-                    Personal blog: <a href="https://tuanminh1988.wordpress.com/" target="_blank">tuanminh1988.wordpress.com</a>
-                </p>
+                <p><strong>Email:</strong> <a href="mailto:tuanminh.nguyen@monash.edu">tuanminh.nguyen@monash.edu</a> or <a href="mailto:minhnguyen@yandex.com">minhnguyen@yandex.com</a></p>
+                <p>I also maintain a <a href="https://tuanminh1988.wordpress.com/">personal blog</a> with miscellaneous writings in Vietnamese and English.</p>
+                <p><a href="https://sites.google.com/site/minhbsu/">Google Sites homepage</a> · <a href="https://sites.google.com/site/minhbsu/publications">Original research page</a></p>
             </div>
         </div>
     </section>
